@@ -1,0 +1,13 @@
+:root{
+    --color-pepe: #ffffff;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: var(--color-pepe);
+    color: red;
+}
+
+
