@@ -9,5 +9,8 @@ body{
     background: var(--color-pepe);
     color: red;
 }
+nav{
+    background-attachment: fixed;
+}
 
 
