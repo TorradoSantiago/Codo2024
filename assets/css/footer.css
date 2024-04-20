@@ -21,4 +21,19 @@ footer div p{
     font-size: 1rem;
     text-decoration: none;
     margin: 0px 10px;
+} 
+
+@media screen and (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-icons {
+        margin-top: 10px; /* Añadido para separar las redes sociales del texto en pantallas pequeñas */
+    }
+
+    .social-icons li {
+        margin: 0 5px; /* Reducir el margen entre los íconos */
+    }
 }
