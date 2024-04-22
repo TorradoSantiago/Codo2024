@@ -1,49 +1,73 @@
-*{
+
+* {
     padding: 0;
     margin: 0;
     font-family: "Open Sans", sans-serif;
     color: white;
     font-size: 14px;
-  
 }
+
+/* Media query para ajustar el tamaño de fuente en pantallas pequeñas */
 @media screen and (max-width: 600px) {
     html {
-      font-size: 12px;
+        font-size: 12px;
     }
   }
 body{
+}
+
+html,
+body,
+main,
+main video,
+.capa {
+    height: 100%;
+}
+
+body {
     display: flex;
     flex-direction: column;
     height: auto;
 }
 
-main{
-    position: relative;
+main {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
-main video{
+main video {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100%; /* Cambiado para que el video cubra toda la pantalla */
     object-fit: cover;
     z-index: -1;
 }
-.capa{
+
+.capa {
     position: absolute;
     width: 100%;
-    height: 100%;
-    background: rgb(46, 24, 1); 
-    opacity: 0.8;
+    height: 100%; /* Cambiado para que la capa cubra toda la pantalla */
+    background: rgb(46, 24, 1);
+    opacity: 0.5;
     mix-blend-mode: overlay;
 }
 
-.section1{
+.section1 {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px);
+}
+
+.section1 h2 {
+    font-size: 2rem;
+    
+}
+
+.section2 {
     background: rgba(34, 33, 33, 0.486);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4.9px);
@@ -53,18 +77,12 @@ main video{
     border-radius: 5px;
 }
 
-.section1 h2{
-    font-size: 2rem;
-}
-
-.section1 .contenedor{
+.section2 .contenedor {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "card1 card2 card3 card4"
-                          "card5 card6 card7 card8"
-                          "card5 card3 card5 card4";
-    width: 60%;
-    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Modificado para que las tarjetas se ajusten automáticamente */
+    grid-gap: 20px;
+    padding: 10px;
+    width: 100%; /* Cambiado para que las tarjetas ocupen todo el ancho */
     margin: 0 auto;
 }
 
@@ -73,36 +91,36 @@ main video{
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 10px;
-    
 }
-  
+
 .card-img {
     width: 100%;
-    height: 150px;
-    object-fit:contain
+    height: auto; /* Cambiado para que las imágenes no se deformen */
+    max-height: 150px; /* Cambiado para limitar la altura de las imágenes */
+    object-fit: cover; /* Cambiado para que las imágenes se ajusten correctamente */
 }
-  
+
 .card-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 10px;
 }
-  
-.card-title {  
+
+.card-title {
     font-size: 1rem;
 }
-  
+
 .card-description {
     color: #666;
 }
-  
+
 .card-price {
     margin: 10px 0;
     font-size: 1rem;
     font-weight: bold;
 }
-  
+
 .card-btn {
     display: inline-block;
     padding: 8px 16px;
@@ -111,11 +129,7 @@ main video{
     text-decoration: none;
     border-radius: 4px;
 }
-  
+
 .card-btn:hover {
     background-color: #3d351f;
 }
-
-
-
-
