@@ -6,41 +6,27 @@
     color: white;
     font-size: 14px;
 }
-
-/* Media query para ajustar el tamaño de fuente en pantallas pequeñas */
-@media screen and (max-width: 600px) {
-    html {
+@media screen and (max-width: 768px){
+    html{
         font-size: 12px;
     }
-  }
-body{
 }
-
-html,
-body,
-main,
-main video,
-.capa {
-    height: 100%;
-}
-
 body {
     display: flex;
     flex-direction: column;
-    height: auto;
 }
 
 main {
+    position: relative;
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
 
 main video {
     position: absolute;
     width: 100%;
-    height: 100%; /* Cambiado para que el video cubra toda la pantalla */
-    object-fit: cover;
+    height: 100%;
+    object-fit:cover;
     z-index: -1;
 }
 
@@ -49,41 +35,36 @@ main video {
     width: 100%;
     height: 100%; /* Cambiado para que la capa cubra toda la pantalla */
     background: rgb(46, 24, 1);
-    opacity: 0.5;
+    opacity: 1;
     mix-blend-mode: overlay;
 }
 
+
 .section1 {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: calc(100vh - 80px);
-}
-
-.section1 h2 {
-    font-size: 2rem;
-    
-}
-
-.section2 {
     background: rgba(34, 33, 33, 0.486);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4.9px);
     -webkit-backdrop-filter: blur(4.9px);
-    width: 80%;
-    margin: auto auto;
+    width: 70%;
+    padding: 20px;
+    margin: 100px auto;
     border-radius: 5px;
 }
 
-.section2 .contenedor {
+.section1 h2 {
+    font-size: 2rem;
+    margin: 10px 0;
+}
+
+.section1 .contenedor {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Modificado para que las tarjetas se ajusten automáticamente */
-    grid-gap: 20px;
-    padding: 10px;
-    width: 100%; /* Cambiado para que las tarjetas ocupen todo el ancho */
-    margin: 0 auto;
+    grid-gap: 10px;
+    width: 70%;
+    margin: 10px auto;
 }
 
 .card {
@@ -95,9 +76,8 @@ main video {
 
 .card-img {
     width: 100%;
-    height: auto; /* Cambiado para que las imágenes no se deformen */
-    max-height: 150px; /* Cambiado para limitar la altura de las imágenes */
-    object-fit: cover; /* Cambiado para que las imágenes se ajusten correctamente */
+    max-height: 150px;
+    object-fit: contain; /* Cambiado para que las imágenes se ajusten correctamente */
 }
 
 .card-content {
