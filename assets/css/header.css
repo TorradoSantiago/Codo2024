@@ -1,0 +1,79 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1rem;
+    border-bottom: 2px solid rgb(218, 86, 46);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(59, 39, 39, 0.12);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(4.9px);
+    z-index: 1;
+}
+
+/* Estilos para el contenido dentro del header */
+header * {
+    display: flex;
+}
+
+/* Estilos para el logo */
+.logo {
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.logo img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.logo h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Estilos para el formulario de búsqueda */
+header form {
+    align-items: center;
+}
+
+header form input {
+    width: 15rem;
+    height: 1.4rem;
+    padding: 5px;
+    border: none;
+    border-radius: 7px;
+    margin: 0 5px;
+    color: black;
+    outline: none;
+}
+
+/* Estilos para los enlaces de navegación */
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    font-size: 1rem;
+}
+
+/* Media query para hacer el header responsive */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px 20px; /* Ajustar el espacio interior */
+    }
+
+    .logo img {
+        width: 3rem; /* Reducir el tamaño del logo en pantallas pequeñas */
+        height: 3rem;
+    }
+
+    header form input {
+        width: 10rem; /* Reducir el ancho del campo de búsqueda en pantallas pequeñas */
+    }
+}
