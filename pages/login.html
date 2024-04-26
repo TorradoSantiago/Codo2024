@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario de logueo</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <link rel="stylesheet" href="/assets/css/header.css">
+    <link rel="stylesheet" href="/assets/css/footer.css">
+    <link rel="stylesheet" href="/assets/css/login.css">
+
+
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href=""><img src="../assets/images/favicon.ico" alt=""></a>
+            <h1>HardSoft</h1>
+        </div>
+        <form class="barra-busqueda" action="#">
+            <span class="material-symbols-outlined">search</span>
+            <input type="text" placeholder="Buscar...">
+        </form>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="#">Acceder</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <video muted autoplay loop><source src="../assets/videos/4247319-hd_1920_1080_30fps.mp4" type="video/mp4"></video>
+
+    <div id="acceder"> 
+        <form name="acceso" method="post" action="login.php" id="acceso">
+            <label for="username">Usuario:</label>
+            <input type="text" id="username" name="username" placeholder="Coloque su usuario" required>
+            
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" placeholder="Coloque su contraseña" required>
+            
+            <input type="submit" name="login" value="Log In" style="font-size:18px;">
+        </form>
+    </div>
+    </main>
+
+    <footer>
+        <div>
+            <p>&copy; 2024 HardSoft. Todos los derechos reservados.</p>
+        </div>
+        <ul class="social-icons">
+            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-x"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+        </ul>  
+    </footer>  
+
+</body>
+</html>
