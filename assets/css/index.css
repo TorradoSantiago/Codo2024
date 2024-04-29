@@ -6,11 +6,7 @@
     color: white;
     font-size: 14px;
 }
-@media screen and (max-width: 768px){
-    html{
-        font-size: 12px;
-    }
-}
+
 body {
     display: flex;
     flex-direction: column;
@@ -50,7 +46,7 @@ main video {
     -webkit-backdrop-filter: blur(4.9px);
     width: 70%;
     padding: 20px;
-    margin: 100px auto;
+    margin: 100px auto 50px;
     border-radius: 5px;
 }
 
@@ -114,61 +110,12 @@ main video {
     background-color: #3d351f;
 }
 
+@media screen and (max-width: 768px){
+    html{
+        font-size: 12px;
+    }
+    .section1{
+        margin: 150px auto 50px;
+    }
 
-/* CSS MENU HAMBURGUESA */
-
-.menuHamburguesa a {
-    color: inherit;
-    text-decoration: none;
-    display: block;
-    padding: 10px 20px;
-    border-bottom: 2px solid #456789;
-    max-width: 200px;
-    background: #234567;
-    font-variant: small-caps;
-    text-shadow: 1px 1px black;
-  }
-
-  .menuHamburguesa input[type="checkbox"], .menuHamburguesa .fa-bars, .menuHamburguesa .fa-times {
-    position: absolute;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    right: 0;
-    top: 0;
-    width: 48px;
-    height: 48px;
-  }
-  
-  .menuHamburguesa .fa-bars, .menuHamburguesa .fa-times {
-    font-size: 48px;
-    pointer-events: none;
-  }
-  
-  .menuHamburguesa input[type="checkbox"] {
-    opacity: 0;
-  }
-  
-  .menuHamburguesa {
-    color: white;
-    position: relative;
-    background: #123456;
-    min-height: 48px;
-  }
-  
-  .menuHamburguesa nav {
-    display: none;
-  }
-  
-  .menuHamburguesa input:checked ~ nav {
-    display: block;
-  }
-  
-  .menuHamburguesa input:checked ~ .fa-bars {
-    display: none;
-  }
-  
-  .menuHamburguesa input:not(:checked) ~ .fa-times {
-    display: none;
-  }
-
+}
