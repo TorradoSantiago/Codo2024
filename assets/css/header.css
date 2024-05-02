@@ -24,7 +24,7 @@ header * {
 /* Estilos para el logo */
 .logo {
     align-items: center;
-    font-size: 0.8rem;
+    font-size: 2rem;
 }
 
 .logo img {
@@ -34,7 +34,7 @@ header * {
 
 .logo h1 {
     font-family: "Roboto", sans-serif;
-    font-weight: 700;
+    font-size: 1.3rem;
     font-style: italic;
 }
 
@@ -52,6 +52,7 @@ header form input {
     margin: 0 5px;
     color: black;
     outline: none;
+    font-size: 0.8rem;
 }
 
 /* Estilos para los enlaces de navegación */

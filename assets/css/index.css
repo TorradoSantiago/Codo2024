@@ -1,12 +1,3 @@
-
-* {
-    padding: 0;
-    margin: 0;
-    font-family: "Open Sans", sans-serif;
-    color: white;
-    font-size: 14px;
-}
-
 body {
     display: flex;
     flex-direction: column;
@@ -29,7 +20,7 @@ main video {
 .capa {
     position: absolute;
     width: 100%;
-    height: 100%; /* Cambiado para que la capa cubra toda la pantalla */
+    height: 100%;
     background: rgb(46, 24, 1);
     opacity: 1;
     mix-blend-mode: overlay;
@@ -117,5 +108,4 @@ main video {
     .section1{
         margin: 150px auto 50px;
     }
-
 }

@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const params = new URLSearchParams(window.location.search);
     const productId = params.get('id');
-
     const productDetails = {
         '1': {
             name: 'Producto 1',
