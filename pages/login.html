@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HardSoft - Venta y reparacion de Hardware</title>
     <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+
     <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/header.css">
     <link rel="stylesheet" href="/assets/css/footer.css">
     <link rel="stylesheet" href="/assets/css/login.css">
-    <link rel="stylesheet" href="/assets/css/global.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!--Fuentes Google-->
@@ -21,68 +22,65 @@
     
     <!--AOS-->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-
-
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <a href=""><img src="../assets/images/logo.PNG" alt=""></a>
-            <h1>HardSoft</h1>
-        </div>
-        <!-- Menu Hamburguesa -->
-        <div class="menuHamburguesa">
-            <input type="checkbox">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-times"></i>
-            <nav>
-              <ul>
-                <li><a href="ham">Item 1</a></li>
-                <li><a href="ham">Item 2</a></li>
-                <li><a href="ham">Item 3</a></li>
-                <li><a href="ham">Item 4</a></li>
-                <li><a href="ham">Item 5</a></li>
-              </ul>
-            </nav>
-        </div>
-          
-        <form class="barra-busqueda" action="#">
-            <span class="material-symbols-outlined">search</span>
-            <input type="text" placeholder="Buscar Producto">
-        </form>
-        <!-- Menu Comun -->
+  <header>
+    <div class="logo">
+        <a href=""><img src="../assets/images/logo.PNG" alt=""></a>
+        <h1>HardSoft</h1>
+    </div>
+    <!-- Menu Hamburguesa -->
+    <div class="menuHamburguesa">
+        <input type="checkbox">
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times"></i>
         <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="#">Acerca de</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Contacto</a></li>
-                <li><a href="pages/login.html">Acceder</a></li>
-            </ul>
+          <ul>
+            <li><a href="ham">Item 1</a></li>
+            <li><a href="ham">Item 2</a></li>
+            <li><a href="ham">Item 3</a></li>
+            <li><a href="ham">Item 4</a></li>
+            <li><a href="ham">Item 5</a></li>
+          </ul>
         </nav>
+    </div>
+      
+    <form class="barra-busqueda" action="#">
+        <span class="material-symbols-outlined">search</span>
+        <input type="text" placeholder="Buscar Producto">
+    </form>
+    <!-- Menu Comun -->
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Acerca de</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="pages/login.html">Acceder</a></li>
+        </ul>
+    </nav>
     </header>
 
-    <main>
+  <main>
         <video muted autoplay loop><source src="../assets/videos/4247319-hd_1920_1080_30fps.mp4" type="video/mp4"></video>
-        <section  data-aos="zoom-in"  data-aos-duration="1000" class="acceder">
-          <form class="form" action=" " method="post">
-            <fieldset>
-              <div class="form-control">
-                <label for="usuario">Usuario</label>
-                <input type="usuario" id="usuario" placeholder="Usuario"/>
-              </div>
-              
-              <div class="form-control">
-                <label for="contraseña">Contraseña</label>
-                <input type="contraseña" id="contraseña" placeholder="Contraseña"/>
-              </div>		
-              <input  class="boton" type="submit" value="Ingresar">
-            </fieldset>
-          </form>
-        </section>  
+          <div class="capa"></div>
+          <section  data-aos="zoom-in"  data-aos-duration="1000" class="acceder">
+            <form class="form" action=" " method="post">
+              <fieldset>
+                <div class="form-control">
+                  <label for="usuario">Usuario</label>
+                  <input type="usuario" id="usuario" placeholder="Usuario"/>
+                </div>
+                <div class="form-control">
+                  <label for="contraseña">Contraseña</label>
+                  <input type="contraseña" id="contraseña" placeholder="Contraseña"/>
+                </div>		
+                <input  class="boton" type="submit" value="Ingresar">
+              </fieldset>
+            </form>
+          </section>  
+  </main>
 
-    </main>
     <footer>
         <div>
             <p>&copy; 2024 HardSoft. Todos los derechos reservados.</p>
