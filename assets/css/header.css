@@ -43,7 +43,7 @@ header form {
     align-items: center;
 }
 
-header form input {
+.barra-busqueda input {
     width: 15rem;
     height: 1.4rem;
     padding: 5px;
@@ -151,4 +151,8 @@ header nav ul li a {
     .menuHamburguesa input[type="checkbox"], .menuHamburguesa .fa-bars, .menuHamburguesa .fa-times{
         display: block;
     }
+}
+
+@media screen and (max-width: 480px){ /*FALTA AGREGAR RESPONSIVE PARA CELULARES*/
+
 }
