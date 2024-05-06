@@ -1,51 +1,72 @@
-* {
-    padding: 0;
-    margin: 0;
-    font-family: "Open Sans", sans-serif;
-    color: white;
-    font-size: 14px;
+html{
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
-img {
-    overflow-clip-margin: content-box;
-    overflow: clip;
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
+
+main video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    z-index: -1;
+}
+
+.capa {
+    position: absolute;
+    width: 100%;
+    height: 100%; /* Cambiado para que la capa cubra toda la pantalla */
+    background: rgb(46, 24, 1);
+    opacity: 1;
+    mix-blend-mode: overlay;
+}
+
+/*FORMULARIO*/
 
 .contform {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80vh;
-    width: 100vw;
-    padding-top: 60px;
-    padding-bottom: 30px;
-    font-family: "Open Sans", sans-serif;
-    font-size: 10px;
+    width: 60vw;
+    height: 100%;
+    margin: auto;
+
 }
 
 .form {
-    width: 60%;
-    height: 100%;
-    padding: 0.5em 2.5em;
-    background: radial-gradient(circle, #2e2d2d, #636363);
-    margin-top: 1em;
+    display: flex;
+    border-radius: 10px;
+    background: rgba(34, 33, 33, 0.486);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(4.9px);
 }
 
 fieldset {
     border: none;
-    padding: 0;
-    margin: 0;
+    padding: 20px;
+    margin: auto;
 }
 
-legend {
+h2{
     padding: 0.2em;
     text-align: center;
     font-weight:bold; 
     color: rgba(234, 244, 235, 0.911);
     font-size: 1.5em;
 }
-
+    
 label,
 input,
 textarea {
@@ -55,6 +76,7 @@ textarea {
     border-radius: 0.3em;
     font-size: 1.2em;
     font-family:Verdana;
+    margin: 10px 0;
 }
 
 input,
@@ -76,12 +98,12 @@ textarea:invalid:focus {
 
 input:valid:focus,
 textarea:valid:focus {
-    border-bottom: 2px solid #0ec72a;
+    border-bottom: 2px solid rgb(218, 86, 46);
 }
 
 input:focus,
 textarea:focus {
-    border-bottom: 2px solid #8e999a;
+    border-bottom: 2px solid rgb(218, 86, 46);
     background-color: rgb(104, 106, 106);
 }
 
@@ -96,8 +118,8 @@ textarea:focus {
 }
 
 .btn {
-    background: radial-gradient(circle, #116443, #108c6f);
-    color: white;
+    background-color: rgb(218, 86, 46);
+    border: none;
     cursor: pointer;
     padding: 0.4em;
     margin-top: 0.8em;
@@ -105,6 +127,12 @@ textarea:focus {
     font-size: 1.2em;
     font-weight:bold;
     border-radius: 1em;
+}
+
+@media screen and (max-width: 768px){
+    html{
+        font-size: 12px;
+    }
 }
 
 @media screen and (max-width: 600px) {

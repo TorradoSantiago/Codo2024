@@ -1,122 +1,7 @@
-* {
-    padding: 0;
-    margin: 0;
-    font-family: "Open Sans", sans-serif;
-    color: white;
-    font-size: 14px;
-}
-@media screen and (max-width: 768px){
-    html{
-        font-size: 12px;
-    }
-}
-body {
-    display: flex;
-    flex-direction: column;
-}
 
-main {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
+/*  ¿QUE ES ESO?: */  
 
-main video {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit:cover;
-    z-index: -1;
-}
-
-.capa {
-    position: absolute;
-    width: 100%;
-    height: 100%; /* Cambiado para que la capa cubra toda la pantalla */
-    background: rgb(46, 24, 1);
-    opacity: 1;
-    mix-blend-mode: overlay;
-}
-
-
-.section1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: rgba(34, 33, 33, 0.486);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(4.9px);
-    -webkit-backdrop-filter: blur(4.9px);
-    width: 70%;
-    padding: 20px;
-    margin: 100px auto;
-    border-radius: 5px;
-}
-
-.section1 h2 {
-    font-size: 2rem;
-    margin: 10px 0;
-}
-
-.section1 .contenedor {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Modificado para que las tarjetas se ajusten automáticamente */
-    grid-gap: 10px;
-    width: 70%;
-    margin: 10px auto;
-}
-
-.card {
-    background-color: rgb(32, 31, 31);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-}
-
-.card-img {
-    width: 100%;
-    max-height: 150px;
-    object-fit: contain; /* Cambiado para que las imágenes se ajusten correctamente */
-}
-
-.card-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.card-title {
-    font-size: 1rem;
-}
-
-.card-description {
-    color: #666;
-}
-
-.card-price {
-    margin: 10px 0;
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-.card-btn {
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: rgb(218, 86, 46);
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-}
-
-.card-btn:hover {
-    background-color: #3d351f;
-}
-
-
-/* CSS MENU HAMBURGUESA */
-
-.menuHamburguesa a {
+/* .menuHamburguesa a {
     color: inherit;
     text-decoration: none;
     display: block;
@@ -169,5 +54,5 @@ main video {
   
   .menuHamburguesa input:not(:checked) ~ .fa-times {
     display: none;
-  }
+  } */
 
