@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HardSoft | Catalogo completo</title>
+    <meta
+        name="description"
+        content="Catalogo completo de HardSoft con configuraciones por perfil, contexto de uso y ruta de compra."
+    >
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/general.css">
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/products.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../index.html" aria-label="Volver al inicio de HardSoft">
+                <span class="brand-mark">HS</span>
+                <span class="brand-copy">
+                    <strong>HardSoft</strong>
+                    <small>hardware, upgrades y soporte</small>
+                </span>
+            </a>
+
+            <input class="menu-toggle" type="checkbox" id="menu-toggle">
+            <label class="menu-button" for="menu-toggle">Menu</label>
+
+            <nav class="site-nav" aria-label="Principal">
+                <a href="../index.html#inicio">Inicio</a>
+                <a href="../index.html#catalogo">Catalogo</a>
+                <a href="productos.html">Productos</a>
+                <a href="../index.html#servicios">Servicios</a>
+                <a href="../index.html#proceso">Proceso</a>
+                <a href="contactos.html">Contacto</a>
+                <a class="nav-cta" href="login.html">Portal de clientes</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-main page-products">
+        <section class="page-hero products-hero">
+            <div class="container products-hero-grid">
+                <div class="products-hero-copy">
+                    <span class="section-label">catalogo completo</span>
+                    <h1 class="section-title">Configuraciones explicadas por uso, etapa de compra y nivel de acompanamiento.</h1>
+                    <p class="section-copy">
+                        Esta pagina suma la capa que le faltaba al proyecto: un catalogo mas profundo,
+                        con lectura comercial y suficiente contexto para que cada propuesta se vea
+                        defendible, no solo estetica.
+                    </p>
+
+                    <div class="pill-row">
+                        <span class="metric-pill"><strong id="total-products">0</strong> configuraciones</span>
+                        <span class="metric-pill"><strong id="category-total">0</strong> categorias</span>
+                        <span class="metric-pill"><strong id="average-ticket">ARS 0</strong> ticket medio</span>
+                    </div>
+
+                    <div class="products-hero-actions">
+                        <a class="button primary" href="contactos.html?service=armado">Pedir propuesta</a>
+                        <a class="button secondary" href="../index.html#catalogo">Ver preview en home</a>
+                    </div>
+                </div>
+
+                <aside class="surface-panel products-hero-panel">
+                    <h2>Como leer esta pagina</h2>
+                    <div class="products-hero-points">
+                        <article>
+                            <h3>Por contexto real</h3>
+                            <p>Las configuraciones se presentan segun el tipo de trabajo y no solo por piezas o specs sueltas.</p>
+                        </article>
+                        <article>
+                            <h3>Con criterio comercial</h3>
+                            <p>Cada opcion deja claro a quien le conviene, que resuelve y como se conecta con una consulta.</p>
+                        </article>
+                        <article>
+                            <h3>Lista para crecer</h3>
+                            <p>La estructura queda preparada para sumar stock, fichas tecnicas o integracion real en una siguiente etapa.</p>
+                        </article>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section-shell">
+            <div class="container products-overview-grid">
+                <article class="surface-panel products-overview-card">
+                    <span>Compra guiada</span>
+                    <h3>Menos ruido, mas criterio</h3>
+                    <p>El catalogo filtra mejor la oferta y evita que la experiencia se sienta como una lista generica de hardware.</p>
+                </article>
+                <article class="surface-panel products-overview-card">
+                    <span>Operacion</span>
+                    <h3>Equipos faciles de sostener</h3>
+                    <p>Se priorizan escenarios de uso, continuidad y claridad para puestos individuales o equipos chicos.</p>
+                </article>
+                <article class="surface-panel products-overview-card">
+                    <span>Portfolio</span>
+                    <h3>Mas completo para mostrar</h3>
+                    <p>Con esta pagina el proyecto se presenta como una web comercial mas madura y lista para compartir.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-shell">
+            <div class="container catalog-stage">
+                <div class="catalog-heading">
+                    <div>
+                        <span class="section-label">explorar configuraciones</span>
+                        <h2 class="section-title">Busca por categoria, necesidad o tipo de cliente.</h2>
+                        <p class="section-copy">
+                            Cada ficha resume foco de uso, prioridad y el tipo de acompanamiento
+                            que mejor encaja con la consulta.
+                        </p>
+                    </div>
+
+                    <div class="catalog-tools surface-panel">
+                        <label class="search-field" for="search-products">
+                            <span>Buscar por nombre, categoria, uso o ventaja principal</span>
+                            <input
+                                id="search-products"
+                                type="search"
+                                placeholder="Ej. BI, oficina, equipos, streaming"
+                            >
+                        </label>
+                        <div id="category-filters" class="filter-row" aria-label="Filtros por categoria"></div>
+                        <p class="catalog-count">Mostrando <strong id="product-count">0</strong> configuraciones activas.</p>
+                    </div>
+                </div>
+
+                <div id="products-grid" class="products-grid" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <section class="section-shell">
+            <div class="container routes-layout">
+                <div>
+                    <span class="section-label">rutas de compra</span>
+                    <h2 class="section-title">Tres maneras de convertir este catalogo en una venta mejor armada.</h2>
+                    <p class="section-copy">
+                        Esta capa ayuda a cerrar la narrativa: no se muestran solo productos, se
+                        muestra tambien como se contratan y como se acompanian.
+                    </p>
+                </div>
+
+                <div class="routes-grid">
+                    <article class="surface-panel route-card">
+                        <span>Esencial</span>
+                        <h3>Diagnostico y propuesta</h3>
+                        <p>Para quien necesita una recomendacion clara y rapida antes de decidir compra o upgrade.</p>
+                    </article>
+                    <article class="surface-panel route-card">
+                        <span>Implementacion</span>
+                        <h3>Equipo listo para usar</h3>
+                        <p>Incluye seleccion, armado o upgrade, puesta a punto y soporte inicial para salir operativo.</p>
+                    </article>
+                    <article class="surface-panel route-card">
+                        <span>Equipos</span>
+                        <h3>Varias estaciones con criterio comun</h3>
+                        <p>Ideal para oficinas, estudios o emprendimientos que necesitan continuidad y orden tecnico.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <a class="brand footer-brand" href="../index.html">
+                    <span class="brand-mark">HS</span>
+                    <span class="brand-copy">
+                        <strong>HardSoft</strong>
+                        <small>hardware, upgrades y soporte</small>
+                    </span>
+                </a>
+                <p class="footer-copy">
+                    Catalogo mas profundo para presentar productos, criterio comercial y una propuesta mas completa.
+                </p>
+            </div>
+
+            <div>
+                <h2>Explorar</h2>
+                <a href="../index.html#catalogo">Catalogo</a>
+                <a href="productos.html">Productos</a>
+                <a href="../index.html#servicios">Servicios</a>
+                <a href="../index.html#proceso">Proceso</a>
+            </div>
+
+            <div>
+                <h2>Contacto</h2>
+                <a href="contactos.html">Formulario comercial</a>
+                <a href="login.html">Portal de clientes</a>
+                <a href="mailto:hola@hardsoft.com">hola@hardsoft.com</a>
+            </div>
+        </div>
+
+        <div class="container footer-meta">
+            <p>&copy; <span id="current-year">2026</span> HardSoft. Catalogo completo actualizado.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/Js/catalog-data.js"></script>
+    <script src="../assets/Js/products.js"></script>
+</body>
+</html>

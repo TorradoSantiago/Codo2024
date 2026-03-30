@@ -185,6 +185,19 @@
     margin-top: 2rem;
 }
 
+.catalog-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.catalog-footer p {
+    color: var(--muted);
+}
+
 .product-card {
     display: flex;
     flex-direction: column;
@@ -446,6 +459,11 @@
     .hero {
         min-height: auto;
         padding-top: 5rem;
+    }
+
+    .catalog-footer {
+        display: grid;
+        justify-content: stretch;
     }
 }
 
