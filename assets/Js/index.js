@@ -5,7 +5,9 @@ const products = [
         price: 1280000,
         image: "assets/images/tarjetas/prod1.png",
         description: "Equipo para analisis, dashboards y multitarea intensiva con foco en estabilidad.",
-        tags: ["Analisis", "SQL", "BI"]
+        tags: ["Analisis", "SQL", "BI"],
+        audience: "Perfiles de data y BI",
+        leadTime: "Entrega sugerida: 72 hs"
     },
     {
         name: "Pulse Creator",
@@ -13,7 +15,9 @@ const products = [
         price: 1490000,
         image: "assets/images/tarjetas/prod2.png",
         description: "Pensada para diseno, edicion liviana y trabajo diario con varias aplicaciones abiertas.",
-        tags: ["Diseno", "Contenido", "Edicion"]
+        tags: ["Diseno", "Contenido", "Edicion"],
+        audience: "Freelancers y creadores",
+        leadTime: "Entrega sugerida: 72 hs"
     },
     {
         name: "Vertex Office Pro",
@@ -21,7 +25,9 @@ const products = [
         price: 890000,
         image: "assets/images/tarjetas/prod3.png",
         description: "Configuracion solida para equipos administrativos, ventas y operaciones.",
-        tags: ["Oficina", "Ventas", "CRM"]
+        tags: ["Oficina", "Ventas", "CRM"],
+        audience: "Operacion y ventas",
+        leadTime: "Entrega sugerida: 48 hs"
     },
     {
         name: "Flux Gaming",
@@ -29,7 +35,9 @@ const products = [
         price: 1710000,
         image: "assets/images/tarjetas/prod4.png",
         description: "Rendimiento visual y buena refrigeracion para largas sesiones y streaming.",
-        tags: ["Gaming", "Streaming", "RGB"]
+        tags: ["Gaming", "Streaming", "RGB"],
+        audience: "Gaming y streaming",
+        leadTime: "Entrega sugerida: 96 hs"
     },
     {
         name: "Signal Hybrid",
@@ -37,7 +45,9 @@ const products = [
         price: 1170000,
         image: "assets/images/tarjetas/prod5.png",
         description: "Una base flexible para quienes combinan oficina, visualizacion y uso profesional.",
-        tags: ["Hibrido", "Trabajo", "Escalable"]
+        tags: ["Hibrido", "Trabajo", "Escalable"],
+        audience: "Uso mixto y escalable",
+        leadTime: "Entrega sugerida: 72 hs"
     },
     {
         name: "Nova Compact",
@@ -45,7 +55,9 @@ const products = [
         price: 760000,
         image: "assets/images/tarjetas/prod6.png",
         description: "Formato mas compacto para escritorios chicos sin resignar velocidad.",
-        tags: ["Compacto", "Productividad", "Silencioso"]
+        tags: ["Compacto", "Productividad", "Silencioso"],
+        audience: "Home office y espacios chicos",
+        leadTime: "Entrega sugerida: 48 hs"
     },
     {
         name: "Forge Dev Kit",
@@ -53,7 +65,9 @@ const products = [
         price: 1390000,
         image: "assets/images/tarjetas/prod7.png",
         description: "Preparada para desarrollo, maquinas virtuales y cargas de trabajo tecnicas.",
-        tags: ["Desarrollo", "Docker", "Testing"]
+        tags: ["Desarrollo", "Docker", "Testing"],
+        audience: "Desarrollo y entornos tecnicos",
+        leadTime: "Entrega sugerida: 72 hs"
     },
     {
         name: "Orbit Team Pack",
@@ -61,7 +75,9 @@ const products = [
         price: 980000,
         image: "assets/images/tarjetas/prod8.png",
         description: "Set base para equipar varias estaciones con una logica comun y facil soporte.",
-        tags: ["Equipos", "Operacion", "Escala"]
+        tags: ["Equipos", "Operacion", "Escala"],
+        audience: "Estudios, oficinas y equipos",
+        leadTime: "Cotizacion por volumen"
     }
 ];
 
@@ -150,8 +166,10 @@ function renderProducts() {
                         </div>
                         <h3>${product.name}</h3>
                         <p>${product.description}</p>
+                        <p>${product.audience}</p>
+                        <p>${product.leadTime}</p>
                         <div class="product-tags">${tags}</div>
-                        <a class="button primary" href="pages/contactos.html?product=${encodeURIComponent(product.name)}">
+                        <a class="button primary" href="pages/contactos.html?product=${encodeURIComponent(product.name)}&service=armado">
                             Solicitar propuesta
                         </a>
                     </div>

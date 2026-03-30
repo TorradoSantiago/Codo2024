@@ -1,29 +1,29 @@
 # HardSoft
 
-Sitio institucional y catalogo demo para un negocio de hardware, upgrades y soporte. Esta version fue reorganizada para verse mas solida, tener una narrativa comercial mas clara y servir mejor como pieza de portfolio.
+Sitio institucional y catalogo demo para un negocio de hardware, upgrades y soporte. En esta segunda pasada se reforzo especialmente la capa comercial para que el proyecto no se vea solo como una web prolija, sino como una propuesta de negocio mas completa.
 
-## Mejoras aplicadas
+## Que suma esta version
 
-- Reescritura visual completa del home con hero, catalogo filtrable, servicios y proceso.
-- Correccion de rutas rotas, assets faltantes y enlaces inconsistentes entre paginas.
-- Nuevo formulario de contacto con validacion y mensaje de estado.
-- Portal de clientes demo con flujo simple y presentacion mas profesional.
-- Estilos compartidos listos para escalar sin rehacer toda la estructura.
+- Soluciones explicadas por tipo de cliente y contexto de uso.
+- Paquetes de servicio para mostrar distintos niveles de acompanamiento.
+- FAQ y mejor tratamiento de objeciones comunes.
+- CTAs mas consistentes desde catalogo, servicios y planes.
+- Prefill de servicio en el formulario de contacto.
 
 ## Estructura
 
-- `index.html`: home renovado con catalogo y narrativa comercial.
-- `pages/contactos.html`: formulario comercial.
+- `index.html`: home con catalogo, soluciones, servicios, planes, proceso y FAQ.
+- `pages/contactos.html`: formulario comercial con prefills por producto o servicio.
 - `pages/login.html`: portal demo de clientes.
 - `assets/css/`: estilos globales y por pagina.
 - `assets/Js/`: render del catalogo y validaciones.
 
 ## Como abrirlo
 
-Puedes abrir `index.html` directamente en el navegador o servir la carpeta con cualquier servidor estatico liviano.
+Puedes abrir `index.html` directamente en el navegador o servir la carpeta con cualquier servidor estatico.
 
-## Proximos pasos sugeridos
+## Siguiente escalon natural
 
-- Conectar el formulario a email, CRM o WhatsApp.
-- Agregar backend real para autenticacion de clientes.
-- Incorporar stock, fichas tecnicas y comparador de configuraciones.
+- Integrar envio real del formulario.
+- Conectar autenticacion para el portal.
+- Sumar stock, fichas tecnicas y comparador de configuraciones.
