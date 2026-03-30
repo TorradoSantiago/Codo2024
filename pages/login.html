@@ -1,102 +1,138 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HardSoft - Venta y reparacion de Hardware</title>
-    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="/assets/css/global.css">
-    <link rel="stylesheet" href="/assets/css/login.css">
-    <link rel="stylesheet" href="/assets/css/header.css">
-    <link rel="stylesheet" href="/assets/css/footer.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <!--Fuentes Google-->
+    <title>HardSoft | Portal de clientes</title>
+    <meta
+        name="description"
+        content="Portal demo de HardSoft para clientes, soporte y seguimiento de solicitudes."
+    >
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/general.css">
+    <link rel="stylesheet" href="../assets/css/login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    
-    <!--AOS-->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
 </head>
 <body>
-  <header>
-    <div class="logo">
-        <a href=""><img src="../assets/images/logo.PNG" alt=""></a>
-        <h1>HardSoft</h1>
-    </div>
-    <!-- Menu Hamburguesa -->
-    <div class="menuHamburguesa">
-        <input type="checkbox">
-        <i class="fas fa-bars"></i>
-        <i class="fas fa-times"></i>
-        <nav>
-          <ul>
-            <li><a href="ham">Item 1</a></li>
-            <li><a href="ham">Item 2</a></li>
-            <li><a href="ham">Item 3</a></li>
-            <li><a href="ham">Item 4</a></li>
-            <li><a href="ham">Item 5</a></li>
-          </ul>
-        </nav>
-    </div>
-      
-    <form class="barra-busqueda" action="#">
-        <span class="material-symbols-outlined">search</span>
-        <input type="text" placeholder="Buscar Producto">
-    </form>
-    <!-- Menu Comun -->
-    <nav>
-        <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Acerca de</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Contacto</a></li>
-            <li><a href="pages/login.html">Acceder</a></li>
-        </ul>
-    </nav>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../index.html" aria-label="Volver al inicio de HardSoft">
+                <span class="brand-mark">HS</span>
+                <span class="brand-copy">
+                    <strong>HardSoft</strong>
+                    <small>hardware, upgrades y soporte</small>
+                </span>
+            </a>
+
+            <input class="menu-toggle" type="checkbox" id="menu-toggle">
+            <label class="menu-button" for="menu-toggle">Menu</label>
+
+            <nav class="site-nav" aria-label="Principal">
+                <a href="../index.html#inicio">Inicio</a>
+                <a href="../index.html#catalogo">Catalogo</a>
+                <a href="../index.html#servicios">Servicios</a>
+                <a href="../index.html#proceso">Proceso</a>
+                <a href="contactos.html">Contacto</a>
+                <a class="nav-cta" href="login.html">Portal de clientes</a>
+            </nav>
+        </div>
     </header>
 
-  <main>
-        <video muted autoplay loop><source src="../assets/videos/4247319-hd_1920_1080_30fps.mp4" type="video/mp4"></video>
-          <div class="capa"></div>
-          <section  data-aos="zoom-in"  data-aos-duration="1000" class="acceder">
-            <form class="form" action=" " method="post">
-              <fieldset>
-                <div class="form-control">
-                  <label for="usuario">Usuario:</label>
-                  <input type="usuario" id="usuario" placeholder="Usuario..."/>
+    <main class="page-main page-login">
+        <section class="section-shell">
+            <div class="container auth-grid">
+                <div class="surface-panel auth-copy">
+                    <span class="section-label">portal demo</span>
+                    <h1 class="section-title">Un acceso de clientes que acompana la venta en lugar de dejarla a mitad de camino.</h1>
+                    <p class="section-copy">
+                        Esta pantalla sigue siendo una demo sin backend, pero ahora se presenta
+                        como una pieza coherente dentro del proyecto: seguimiento, soporte y
+                        continuidad para la relacion postventa.
+                    </p>
+
+                    <div class="auth-highlights">
+                        <article>
+                            <strong>Seguimiento</strong>
+                            <p>Consultas, pedidos y estado de soporte en un solo lugar.</p>
+                        </article>
+                        <article>
+                            <strong>Orden</strong>
+                            <p>Acceso mas limpio, con mensajes consistentes y foco comercial.</p>
+                        </article>
+                        <article>
+                            <strong>Escalabilidad</strong>
+                            <p>Base lista para sumar autenticacion real cuando haga falta.</p>
+                        </article>
+                    </div>
                 </div>
-                <div class="form-control">
-                  <label for="contraseña">Contraseña:</label>
-                  <input type="contraseña" id="contraseña" placeholder="Contraseña..."/>
-                </div>		
-                <input  class="boton" type="submit" value="Ingresar">
-              </fieldset>
-            </form>
-          </section>  
-  </main>
 
-    <footer>
-        <div>
-            <p>&copy; 2024 HardSoft. Todos los derechos reservados.</p>
+                <form id="login-form" class="surface-panel form-card auth-form" novalidate>
+                    <div class="form-intro">
+                        <h2>Ingresar al portal</h2>
+                        <p>Usa cualquier email y una clave de al menos 6 caracteres para probar el flujo demo.</p>
+                    </div>
+
+                    <label class="field">
+                        <span>Email</span>
+                        <input type="email" id="login-email" placeholder="cliente@empresa.com">
+                        <small class="field-error" id="login-email-error"></small>
+                    </label>
+
+                    <label class="field">
+                        <span>Clave</span>
+                        <input type="password" id="login-password" placeholder="******">
+                        <small class="field-error" id="login-password-error"></small>
+                    </label>
+
+                    <button class="button primary" type="submit">Ingresar</button>
+                    <p id="login-status" class="status visually-hidden" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <a class="brand footer-brand" href="../index.html">
+                    <span class="brand-mark">HS</span>
+                    <span class="brand-copy">
+                        <strong>HardSoft</strong>
+                        <small>hardware, upgrades y soporte</small>
+                    </span>
+                </a>
+                <p class="footer-copy">
+                    Acceso demo pensado como extension natural de la propuesta comercial.
+                </p>
+            </div>
+
+            <div>
+                <h2>Explorar</h2>
+                <a href="../index.html#catalogo">Catalogo</a>
+                <a href="../index.html#servicios">Servicios</a>
+                <a href="../index.html#proceso">Proceso</a>
+            </div>
+
+            <div>
+                <h2>Contacto</h2>
+                <a href="contactos.html">Formulario comercial</a>
+                <a href="login.html">Portal de clientes</a>
+                <a href="mailto:hola@hardsoft.com">hola@hardsoft.com</a>
+            </div>
         </div>
-        <ul class="social-icons">
-            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa-solid fa-x"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-        </ul>  
-    </footer>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-    AOS.init();
-    </script>  
 
+        <div class="container footer-meta">
+            <p>&copy; <span id="current-year">2026</span> HardSoft. Portal demo actualizado.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/Js/login.js"></script>
 </body>
 </html>
-

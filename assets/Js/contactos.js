@@ -1,151 +1,116 @@
-window.onload = function() {
-	
-	let borrar = document.getElementById('borrar');
-	borrar.addEventListener("click", borrando);
-	
-	let nombre = document.getElementById('nombre');
-	nombre.addEventListener("input", campoNombre);
-		
-	let apellido = document.getElementById('apellido');
-	apellido.addEventListener("input", campoApellido);
-	
-	let correo = document.getElementById('correo');
-	correo.addEventListener("input", campoCorreo);
-	
-	let asunto = document.getElementById('asunto');
-	asunto.addEventListener("input", campoAsunto);
-	
-	let mensaje = document.getElementById('mensaje');
-	mensaje.addEventListener("input", campoMensaje);
-	
+const contactForm = document.getElementById("contact-form");
+const clearButton = document.getElementById("borrar");
+const formStatus = document.getElementById("form-status");
+const footerYear = document.getElementById("current-year");
+
+const fields = {
+    nombre: {
+        input: document.getElementById("nombre"),
+        error: document.getElementById("nombre_error"),
+        validate: (value) => value.trim().length >= 2 || "Ingresa un nombre valido."
+    },
+    correo: {
+        input: document.getElementById("correo"),
+        error: document.getElementById("correo_error"),
+        validate: (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) || "Ingresa un email valido."
+    },
+    empresa: {
+        input: document.getElementById("empresa"),
+        error: document.getElementById("empresa_error"),
+        validate: (value) => value.trim().length >= 3 || "Describe empresa, equipo o proyecto."
+    },
+    servicio: {
+        input: document.getElementById("servicio"),
+        error: document.getElementById("servicio_error"),
+        validate: (value) => value.trim().length > 0 || "Selecciona un servicio."
+    },
+    mensaje: {
+        input: document.getElementById("mensaje"),
+        error: document.getElementById("mensaje_error"),
+        validate: (value) => value.trim().length >= 20 || "Agrega un poco mas de contexto para ayudarte mejor."
+    }
+};
+
+function setFieldState(fieldKey, validationResult) {
+    const field = fields[fieldKey];
+
+    if (!field || !field.input || !field.error) {
+        return true;
+    }
+
+    const wrapper = field.input.closest(".field");
+    const isValid = validationResult === true;
+
+    if (wrapper) {
+        wrapper.classList.toggle("is-invalid", !isValid);
+    }
+
+    field.error.textContent = isValid ? "" : validationResult;
+    return isValid;
 }
 
-function campoNombre() {
-	let cNombre = document.getElementById('nombre').value;
-	
-	if (cNombre) {
-		document.getElementById('nombre_error').innerHTML = " ";
-		document.getElementById('nombre').style.outline = "0.5px solid #000";
-	}
+function validateField(fieldKey) {
+    const field = fields[fieldKey];
+
+    if (!field || !field.input) {
+        return true;
+    }
+
+    return setFieldState(fieldKey, field.validate(field.input.value));
 }
 
-function campoApellido() {
-	let cApellido = document.getElementById('apellido').value;
-	
-	if (cApellido) {
-		document.getElementById('apellido_error').innerHTML = " ";
-		document.getElementById('apellido').style.outline = "0.5px solid #000";
-	}
+function clearStatus() {
+    if (!formStatus) {
+        return;
+    }
+
+    formStatus.classList.add("visually-hidden");
+    formStatus.textContent = "";
 }
 
-function campoCorreo() {
-	let cCorreo = document.getElementById('correo').value;
-	
-	if (cCorreo) {
-		document.getElementById('correo_error').innerHTML = " ";
-		document.getElementById('correo').style.outline = "0.5px solid #000";
-	}
+Object.keys(fields).forEach((fieldKey) => {
+    const field = fields[fieldKey];
+
+    field.input?.addEventListener("input", () => {
+        validateField(fieldKey);
+        clearStatus();
+    });
+});
+
+if (clearButton) {
+    clearButton.addEventListener("click", () => {
+        contactForm?.reset();
+        Object.keys(fields).forEach((fieldKey) => setFieldState(fieldKey, true));
+        clearStatus();
+    });
 }
 
-function campoAsunto() {
-	let cAsunto = document.getElementById('asunto').value;
-	
-	if (cAsunto) {
-		document.getElementById('asunto_error').innerHTML = " ";
-		document.getElementById('asunto').style.outline = "0.5px solid #000";
-	}
+if (contactForm) {
+    const params = new URLSearchParams(window.location.search);
+    const product = params.get("product");
+    const messageField = fields.mensaje.input;
+
+    if (product && messageField && !messageField.value) {
+        messageField.value = `Quiero recibir una propuesta para ${product}.`;
+    }
+
+    contactForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const isValid = Object.keys(fields).every((fieldKey) => validateField(fieldKey));
+
+        if (!isValid || !formStatus) {
+            return;
+        }
+
+        formStatus.classList.remove("visually-hidden");
+        formStatus.textContent =
+            "Consulta enviada. En una implementacion real, este formulario se conectaria con email, CRM o WhatsApp.";
+        contactForm.reset();
+        Object.keys(fields).forEach((fieldKey) => setFieldState(fieldKey, true));
+    });
 }
 
-function campoMensaje() {
-	let cMensaje = document.getElementById('mensaje').value;
-	
-	if (cMensaje) {
-		document.getElementById('mensaje_error').innerHTML = " ";
-		document.getElementById('mensaje').style.outline = "0.5px solid #000";
-	}
+if (footerYear) {
+    footerYear.textContent = String(new Date().getFullYear());
 }
-
-function borrando() {
-	document.location.reload(true);
-}
-
-function contactos() {
-	let expNomape = /^([a-zA-Z]+)(\s[a-zA-Z]+)*$/;
-	let expCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-	let cNombre = document.getElementById('nombre').value;
-	let cApellido = document.getElementById('apellido').value;
-	let cCorreo = document.getElementById('correo').value;
-	let cAsunto = document.getElementById('asunto').value;
-	let cMensaje = document.getElementById('mensaje').value;
-	let nombreError = document.getElementById('nombre_error');
-	let apellidoError = document.getElementById('apellido_error');
-	let correoError = document.getElementById('correo_error');
-	let asuntoError = document.getElementById('asunto_error');
-	let mensajeError = document.getElementById('mensaje_error');
-	let campoNombre = document.getElementById('nombre');
-	let campoApellido = document.getElementById('apellido');	
-	let campoCorreo = document.getElementById('correo');
-	let campoAsunto = document.getElementById('asunto');
-	let campoMensaje = document.getElementById('mensaje');
-	
-	if (!cNombre) {
-		let mensajeErrorNombre = "Por favor, ingresa tu Nombre";
-		nombreError.innerHTML = mensajeErrorNombre;
-		campoNombre.style.outline = "1px solid #f00";
-		return false;
-	} else if (!expNomape.test(cNombre)) {
-		let mensajeInvalidoNombre = "El Nombre ingresado no es válido!";
-		nombreError.innerHTML = mensajeInvalidoNombre;
-		campoNombre.style.outline = "1px solid #f00";
-		return false;
-	}
-
-	if (!cApellido) {
-		let mensajeErrorApellido = "Por favor, ingresa tu Apellido";
-		apellidoError.innerHTML = mensajeErrorApellido;
-		campoApellido.style.outline = "1px solid #f00";
-		return false;
-	} else if (!expNomape.test(cApellido)) {
-		let mensajeInvalidoApellido = "El Apellido ingresado no es válido!";
-		apellidoError.innerHTML = mensajeInvalidoApellido;
-		campoApellido.style.outline = "1px solid #f00";
-		return false;
-	}	
-	
-	if (!cCorreo) {
-		let mensajeErrorCorreo = "Por favor, ingresa tu Mail";
-		correoError.innerHTML = mensajeErrorCorreo;
-		campoCorreo.style.outline = "1px solid #f00";
-		return false;
-	} else if (!expCorreo.test(cCorreo)) {
-		let mensajeInvalidoCorreo = "El Mail ingreso no es válido";
-		correoError.innerHTML = mensajeInvalidoCorreo;
-		campoCorreo.style.outline = "1px solid #f00";
-		return false;
-	}
-	
-	if (!cAsunto) {
-		let mensajeErrorAsunto = "Por favor, ingresa el motivo de tu consulta";
-		asuntoError.innerHTML = mensajeErrorAsunto;
-		campoAsunto.style.outline = "1px solid #f00";
-		return false;
-	} else if (!isNaN(cAsunto)) {
-		let mensajeNumerosAsunto = "No se permiten Numeros en el Asunto";
-		asuntoError.innerHTML = mensajeNumerosAsunto;
-		campoAsunto.style.outline = "1px solid #f00";
-		return false;
-	}
-	
-	if (!cMensaje) {
-		let mensajeErrorMensaje = "Por favor, ingresa el detalle de tu consulta";
-		mensajeError.innerHTML = mensajeErrorMensaje;
-		campoMensaje.style.outline = "1px solid #f00";
-		return false;
-	} else if (cMensaje.length >= 255) {
-		mensajeLargo = "Tu Mensaje es demasiado Largo";
-		mensajeError.innerHTML = mensajeLargo;
-		campoMensaje.style.outline = "1px solid #f00";
-		return false;
-	} 
-}
-

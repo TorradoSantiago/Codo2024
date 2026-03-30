@@ -1,8 +1,210 @@
+:root {
+    --bg: #06111f;
+    --bg-alt: #0f1d31;
+    --surface: rgba(10, 19, 34, 0.82);
+    --surface-soft: rgba(148, 163, 184, 0.08);
+    --card: rgba(9, 16, 28, 0.92);
+    --card-strong: #0b1626;
+    --text: #f8fafc;
+    --muted: #cbd5e1;
+    --muted-strong: #94a3b8;
+    --accent: #f97316;
+    --accent-soft: #fb923c;
+    --success: #22c55e;
+    --border: rgba(148, 163, 184, 0.22);
+    --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+    --radius-lg: 28px;
+    --radius-md: 18px;
+    --radius-sm: 12px;
+    --container: 1180px;
+}
+
 * {
-    padding: 0;
+    box-sizing: border-box;
     margin: 0;
-    font-family: "Open Sans", sans-serif;
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at top left, rgba(249, 115, 22, 0.18), transparent 30%),
+        radial-gradient(circle at top right, rgba(59, 130, 246, 0.16), transparent 35%),
+        linear-gradient(180deg, #06111f 0%, #091426 100%);
+    color: var(--text);
+    font-family: "Manrope", sans-serif;
+    line-height: 1.6;
+}
+
+img,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    border: 0;
+    background: transparent;
+}
+
+main {
+    overflow: hidden;
+}
+
+.container {
+    width: min(var(--container), calc(100% - 2rem));
+    margin: 0 auto;
+}
+
+.section-shell {
+    padding: 5.5rem 0;
+}
+
+.section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-bottom: 1.25rem;
+    color: var(--accent-soft);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+.section-label::before {
+    content: "";
+    width: 2.75rem;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+.section-title {
+    max-width: 14ch;
+    font-family: "Sora", sans-serif;
+    font-size: clamp(2.1rem, 4vw, 4rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+}
+
+.section-copy {
+    max-width: 64ch;
+    margin-top: 1rem;
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    border-radius: 999px;
+    padding: 0.95rem 1.4rem;
+    font-size: 0.98rem;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button.primary {
+    background: linear-gradient(135deg, var(--accent) 0%, #ea580c 100%);
+    color: #fff7ed;
+    box-shadow: 0 16px 32px rgba(249, 115, 22, 0.24);
+}
+
+.button.secondary {
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text);
+}
+
+.button.ghost {
+    color: var(--muted);
+}
+
+.surface-panel {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.92), rgba(9, 16, 28, 0.94));
+    box-shadow: var(--shadow);
+}
+
+.pill-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+}
+
+.metric-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.7rem 0.95rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+.metric-pill strong {
+    color: var(--text);
+    font-size: 1rem;
+}
+
+.status {
+    padding: 0.85rem 1rem;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    border-radius: var(--radius-sm);
+    background: rgba(34, 197, 94, 0.08);
+    color: #dcfce7;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+::selection {
+    background: rgba(249, 115, 22, 0.28);
+    color: #fff7ed;
+}
+
+@media (max-width: 860px) {
+    .section-shell {
+        padding: 4.5rem 0;
+    }
+
+    .section-copy {
+        font-size: 1rem;
+    }
 }

@@ -1,87 +1,273 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HardSoft - Venta y reparacion de Hardware</title>
-    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
-    <!--CSS-->
+    <title>HardSoft | Equipos, upgrades y soporte para equipos exigentes</title>
+    <meta
+        name="description"
+        content="HardSoft combina hardware, upgrades y soporte para equipos profesionales que necesitan rendimiento, orden y seguimiento serio."
+    >
     <link rel="stylesheet" href="assets/css/global.css">
-    <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/footer.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <!--Fuentes Google-->
+    <link rel="stylesheet" href="assets/css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <!--AOS-->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <a href=""><img src="assets/images/logo.PNG" alt=""></a>
-            <h1>HardSoft</h1>
-        </div>
-        <!-- Menu Hamburguesa -->
-        <div class="menuHamburguesa">
-            <input type="checkbox">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-times"></i>
-            <nav>
-              <ul>
-                <li><a href="ham">Item 1</a></li>
-                <li><a href="ham">Item 2</a></li>
-                <li><a href="ham">Item 3</a></li>
-                <li><a href="ham">Item 4</a></li>
-                <li><a href="ham">Item 5</a></li>
-              </ul>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html" aria-label="Ir al inicio de HardSoft">
+                <span class="brand-mark">HS</span>
+                <span class="brand-copy">
+                    <strong>HardSoft</strong>
+                    <small>hardware, upgrades y soporte</small>
+                </span>
+            </a>
+
+            <input class="menu-toggle" type="checkbox" id="menu-toggle">
+            <label class="menu-button" for="menu-toggle">Menu</label>
+
+            <nav class="site-nav" aria-label="Principal">
+                <a href="#inicio">Inicio</a>
+                <a href="#catalogo">Catalogo</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#proceso">Proceso</a>
+                <a href="pages/contactos.html">Contacto</a>
+                <a class="nav-cta" href="pages/login.html">Portal de clientes</a>
             </nav>
         </div>
-         <!-- Menu Comun --> 
-        <form class="barra-busqueda" action="#">
-            <span class="material-symbols-outlined">search</span>
-            <input type="text" placeholder="Buscar Producto...">
-        </form>
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">productos</a></li>
-                <li><a href="#">Inicia sesión</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
     </header>
+
     <main>
-        <video muted autoplay loop><source src="assets/videos/7914775-hd_1920_1080_30fps.mp4" type="video/mp4"></video>
-        <div class="capa"></div>
-        <section class="section1">
-            <h2>VENTA DE HARDWARE</h2>
-            <div class="contenedor">    <!--SE PUESIERON LAS TARJETAS EN EL JS PARA AHORRAR CODIGOD-->        
-            </div>  
+        <section class="hero" id="inicio">
+            <video class="hero-video" muted autoplay loop playsinline>
+                <source src="assets/videos/7914842-hd_1920_1080_30fps.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+
+            <div class="container hero-content">
+                <div class="hero-copy">
+                    <span class="section-label">tecnologia con criterio comercial</span>
+                    <h1>Equipos listos para trabajar, vender y escalar sin improvisaciones.</h1>
+                    <p>
+                        HardSoft organiza compras, upgrades y soporte para perfiles
+                        profesionales, creadores, equipos comerciales y estudios que no
+                        pueden perder tiempo entre piezas sueltas y respuestas a medias.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a class="button primary" href="#catalogo">Ver configuraciones</a>
+                        <a class="button secondary" href="pages/contactos.html">Pedir diagnostico</a>
+                    </div>
+
+                    <div class="pill-row">
+                        <span class="metric-pill"><strong>24h</strong> primer contacto</span>
+                        <span class="metric-pill"><strong>8</strong> setups listos para adaptar</span>
+                        <span class="metric-pill"><strong>3</strong> lineas de servicio</span>
+                    </div>
+                </div>
+
+                <aside class="surface-panel hero-panel">
+                    <p class="hero-panel-label">Por que esta propuesta se siente mas profesional</p>
+                    <div class="hero-panel-grid">
+                        <article>
+                            <h2>Compra guiada</h2>
+                            <p>
+                                Cada equipo parte de un uso real: ventas, edicion, desarrollo,
+                                oficina o gaming. Menos ruido, mas criterio.
+                            </p>
+                        </article>
+                        <article>
+                            <h2>Arquitectura clara</h2>
+                            <p>
+                                Catalogo filtrable, mensajes consistentes y una navegacion
+                                preparada para crecer sin rehacer el proyecto.
+                            </p>
+                        </article>
+                        <article>
+                            <h2>Seguimiento humano</h2>
+                            <p>
+                                Contacto, soporte y acceso para clientes en una misma experiencia
+                                visual, sin enlaces rotos ni assets faltantes.
+                            </p>
+                        </article>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section-shell trust-strip">
+            <div class="container trust-grid">
+                <article class="surface-panel trust-card">
+                    <span>Armado y configuracion</span>
+                    <p>Equipos calibrados para productividad, data, contenido y ventas.</p>
+                </article>
+                <article class="surface-panel trust-card">
+                    <span>Upgrade con criterio</span>
+                    <p>Mejoras sobre tu equipo actual antes de recomendar compras innecesarias.</p>
+                </article>
+                <article class="surface-panel trust-card">
+                    <span>Soporte continuo</span>
+                    <p>Seguimiento de postventa y mantenimiento para que el rendimiento no se caiga.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section-shell catalog-section" id="catalogo">
+            <div class="container">
+                <div class="catalog-heading">
+                    <div>
+                        <span class="section-label">catalogo guiado</span>
+                        <h2 class="section-title">Configuraciones pensadas para necesidades concretas.</h2>
+                        <p class="section-copy">
+                            En lugar de una grilla generica, el catalogo ahora se organiza por
+                            uso, categoria y prioridad. Eso mejora la lectura y hace mas facil
+                            convertir una visita en una consulta.
+                        </p>
+                    </div>
+
+                    <div class="catalog-tools surface-panel">
+                        <label class="search-field" for="search-products">
+                            <span>Buscar por nombre, categoria o uso</span>
+                            <input
+                                id="search-products"
+                                type="search"
+                                placeholder="Ej. workstations, oficina, gaming"
+                            >
+                        </label>
+                        <div id="category-filters" class="filter-row" aria-label="Filtros por categoria"></div>
+                        <p class="catalog-count">Mostrando <strong id="product-count">0</strong> configuraciones.</p>
+                    </div>
+                </div>
+
+                <div id="catalog-grid" class="catalog-grid" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <section class="section-shell services-section" id="servicios">
+            <div class="container services-layout">
+                <div>
+                    <span class="section-label">servicios</span>
+                    <h2 class="section-title">No es solo vender piezas: es resolver contexto de trabajo.</h2>
+                    <p class="section-copy">
+                        Sumamos asesoria comercial, logica de configuracion y soporte para que
+                        la compra sea defendible, entendible y facil de mantener.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+                    <article class="surface-panel service-card">
+                        <h3>Armado desde cero</h3>
+                        <p>
+                            Equipos nuevos para perfiles que necesitan una base estable, moderna
+                            y alineada al presupuesto.
+                        </p>
+                    </article>
+                    <article class="surface-panel service-card">
+                        <h3>Upgrade inteligente</h3>
+                        <p>
+                            Revisamos cuello de botella, compatibilidad y retorno esperado antes
+                            de proponer una compra.
+                        </p>
+                    </article>
+                    <article class="surface-panel service-card">
+                        <h3>Soporte y mantenimiento</h3>
+                        <p>
+                            Ajustes, respaldo y limpieza de configuraciones para sostener el
+                            rendimiento despues de la entrega.
+                        </p>
+                    </article>
+                    <article class="surface-panel service-card">
+                        <h3>Atencion para equipos</h3>
+                        <p>
+                            Cotizaciones para estudios, oficinas y emprendimientos que necesitan
+                            varias estaciones con criterio comun.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-shell process-section" id="proceso">
+            <div class="container process-layout">
+                <div class="surface-panel process-card">
+                    <span class="section-label">proceso</span>
+                    <h2 class="section-title">Una experiencia simple, pero con pasos claros.</h2>
+                    <div class="process-steps">
+                        <article>
+                            <strong>01</strong>
+                            <h3>Diagnostico corto</h3>
+                            <p>Entendemos uso, presupuesto, urgencia y software critico.</p>
+                        </article>
+                        <article>
+                            <strong>02</strong>
+                            <h3>Propuesta curada</h3>
+                            <p>Mostramos opciones comparables, no una lista infinita de piezas.</p>
+                        </article>
+                        <article>
+                            <strong>03</strong>
+                            <h3>Entrega y soporte</h3>
+                            <p>Dejamos el equipo operativo y con una via clara para seguimiento.</p>
+                        </article>
+                    </div>
+                </div>
+
+                <aside class="surface-panel cta-panel">
+                    <span class="section-label">siguiente paso</span>
+                    <h2>Si el proyecto sigue creciendo, la web ya esta lista para acompanarlo.</h2>
+                    <p>
+                        El sitio ahora tiene una base visual mas solida, una narrativa mas clara
+                        y una estructura mucho mas facil de ampliar con carrito, backend o
+                        integracion real de clientes.
+                    </p>
+                    <a class="button primary" href="pages/contactos.html">Quiero una propuesta</a>
+                </aside>
+            </div>
         </section>
     </main>
-    <footer>
-        <div>
-            <p>&copy; 2024 HardSoft. Todos los derechos reservados.</p>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <a class="brand footer-brand" href="index.html">
+                    <span class="brand-mark">HS</span>
+                    <span class="brand-copy">
+                        <strong>HardSoft</strong>
+                        <small>hardware, upgrades y soporte</small>
+                    </span>
+                </a>
+                <p class="footer-copy">
+                    Una presencia mas ordenada para mostrar productos, servicios y confianza
+                    operativa desde el primer scroll.
+                </p>
+            </div>
+
+            <div>
+                <h2>Explorar</h2>
+                <a href="#catalogo">Catalogo</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#proceso">Proceso</a>
+            </div>
+
+            <div>
+                <h2>Contacto</h2>
+                <a href="pages/contactos.html">Formulario comercial</a>
+                <a href="pages/login.html">Portal de clientes</a>
+                <a href="mailto:hola@hardsoft.com">hola@hardsoft.com</a>
+            </div>
         </div>
-        <ul class="social-icons">
-            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa-solid fa-x"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-        </ul>  
+
+        <div class="container footer-meta">
+            <p>&copy; <span id="current-year">2026</span> HardSoft. Version visual renovada para portfolio.</p>
+        </div>
     </footer>
-    <!--JS-->
+
     <script src="assets/Js/index.js"></script>
-    <script>
-        AOS.init();
-    </script>
 </body>
 </html>
