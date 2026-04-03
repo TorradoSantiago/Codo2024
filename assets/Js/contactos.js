@@ -88,13 +88,7 @@ if (clearButton) {
 if (contactForm) {
     const params = new URLSearchParams(window.location.search);
     const product = params.get("product");
-    const service = params.get("service");
     const messageField = fields.mensaje.input;
-    const serviceField = fields.servicio.input;
-
-    if (service && serviceField) {
-        serviceField.value = service;
-    }
 
     if (product && messageField && !messageField.value) {
         messageField.value = `Quiero recibir una propuesta para ${product}.`;
