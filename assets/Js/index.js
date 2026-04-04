@@ -1,69 +1,7 @@
-const products = [
-    {
-        name: "Atlas Workstation",
-        category: "workstations",
-        price: 1280000,
-        image: "assets/images/tarjetas/prod1.png",
-        description: "Equipo para analisis, dashboards y multitarea intensiva con foco en estabilidad.",
-        tags: ["Analisis", "SQL", "BI"]
-    },
-    {
-        name: "Pulse Creator",
-        category: "creadores",
-        price: 1490000,
-        image: "assets/images/tarjetas/prod2.png",
-        description: "Pensada para diseno, edicion liviana y trabajo diario con varias aplicaciones abiertas.",
-        tags: ["Diseno", "Contenido", "Edicion"]
-    },
-    {
-        name: "Vertex Office Pro",
-        category: "oficina",
-        price: 890000,
-        image: "assets/images/tarjetas/prod3.png",
-        description: "Configuracion solida para equipos administrativos, ventas y operaciones.",
-        tags: ["Oficina", "Ventas", "CRM"]
-    },
-    {
-        name: "Flux Gaming",
-        category: "gaming",
-        price: 1710000,
-        image: "assets/images/tarjetas/prod4.png",
-        description: "Rendimiento visual y buena refrigeracion para largas sesiones y streaming.",
-        tags: ["Gaming", "Streaming", "RGB"]
-    },
-    {
-        name: "Signal Hybrid",
-        category: "equipos",
-        price: 1170000,
-        image: "assets/images/tarjetas/prod5.png",
-        description: "Una base flexible para quienes combinan oficina, visualizacion y uso profesional.",
-        tags: ["Hibrido", "Trabajo", "Escalable"]
-    },
-    {
-        name: "Nova Compact",
-        category: "oficina",
-        price: 760000,
-        image: "assets/images/tarjetas/prod6.png",
-        description: "Formato mas compacto para escritorios chicos sin resignar velocidad.",
-        tags: ["Compacto", "Productividad", "Silencioso"]
-    },
-    {
-        name: "Forge Dev Kit",
-        category: "workstations",
-        price: 1390000,
-        image: "assets/images/tarjetas/prod7.png",
-        description: "Preparada para desarrollo, maquinas virtuales y cargas de trabajo tecnicas.",
-        tags: ["Desarrollo", "Docker", "Testing"]
-    },
-    {
-        name: "Orbit Team Pack",
-        category: "equipos",
-        price: 980000,
-        image: "assets/images/tarjetas/prod8.png",
-        description: "Set base para equipar varias estaciones con una logica comun y facil soporte.",
-        tags: ["Equipos", "Operacion", "Escala"]
-    }
-];
+const products = (window.hardsoftCatalog || []).map((product) => ({
+    ...product,
+    image: `assets/images/tarjetas/${product.imageName}`
+}));
 
 const catalogGrid = document.getElementById("catalog-grid");
 const productCount = document.getElementById("product-count");
@@ -71,9 +9,18 @@ const searchInput = document.getElementById("search-products");
 const categoryFilters = document.getElementById("category-filters");
 const currentYear = document.getElementById("current-year");
 
-let activeCategory = "todos";
+let activeCategory = "all";
 
-const currencyFormatter = new Intl.NumberFormat("es-AR", {
+const categoryLabels = {
+    all: "All",
+    workstations: "Workstations",
+    creators: "Creators",
+    office: "Office",
+    gaming: "Gaming",
+    teams: "Teams"
+};
+
+const currencyFormatter = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "ARS",
     maximumFractionDigits: 0
@@ -84,29 +31,23 @@ function renderCategories() {
         return;
     }
 
-    const categories = ["todos", ...new Set(products.map((product) => product.category))];
+    const categories = ["all", ...new Set(products.map((product) => product.category))];
 
     categoryFilters.innerHTML = categories
-        .map((category) => {
-            const label = category === "todos"
-                ? "Todos"
-                : category.charAt(0).toUpperCase() + category.slice(1);
-
-            return `
+        .map((category) => `
                 <button
                     type="button"
                     class="${category === activeCategory ? "is-active" : ""}"
                     data-category="${category}"
                 >
-                    ${label}
+                    ${categoryLabels[category] || category}
                 </button>
-            `;
-        })
+            `)
         .join("");
 
     categoryFilters.querySelectorAll("button").forEach((button) => {
         button.addEventListener("click", () => {
-            activeCategory = button.dataset.category || "todos";
+            activeCategory = button.dataset.category || "all";
             renderCategories();
             renderProducts();
         });
@@ -117,7 +58,7 @@ function getFilteredProducts() {
     const query = (searchInput?.value || "").trim().toLowerCase();
 
     return products.filter((product) => {
-        const matchesCategory = activeCategory === "todos" || product.category === activeCategory;
+        const matchesCategory = activeCategory === "all" || product.category === activeCategory;
         const matchesQuery = [product.name, product.category, product.description, product.tags.join(" ")]
             .join(" ")
             .toLowerCase()
@@ -133,7 +74,6 @@ function renderProducts() {
     }
 
     const filteredProducts = getFilteredProducts();
-
     productCount.textContent = String(filteredProducts.length);
 
     catalogGrid.innerHTML = filteredProducts
@@ -145,14 +85,14 @@ function renderProducts() {
                     <img src="${product.image}" alt="${product.name}">
                     <div class="product-card-body">
                         <div class="product-topline">
-                            <span>${product.category}</span>
+                            <span>${categoryLabels[product.category] || product.category}</span>
                             <strong>${currencyFormatter.format(product.price)}</strong>
                         </div>
                         <h3>${product.name}</h3>
                         <p>${product.description}</p>
                         <div class="product-tags">${tags}</div>
-                        <a class="button primary" href="pages/contactos.html?product=${encodeURIComponent(product.name)}">
-                            Solicitar propuesta
+                        <a class="button primary" href="pages/contact.html?product=${encodeURIComponent(product.name)}">
+                            Request a proposal
                         </a>
                     </div>
                 </article>
@@ -163,9 +103,9 @@ function renderProducts() {
     if (!filteredProducts.length) {
         catalogGrid.innerHTML = `
             <article class="surface-panel" style="padding: 2rem;">
-                <h3 style="font-family: 'Sora', sans-serif; font-size: 1.25rem;">No encontramos resultados</h3>
+                <h3 style="font-family: 'Sora', sans-serif; font-size: 1.25rem;">No results found</h3>
                 <p style="margin-top: 0.75rem; color: var(--muted);">
-                    Prueba con otra palabra o vuelve al filtro "Todos".
+                    Try a different keyword or return to the "All" view.
                 </p>
             </article>
         `;

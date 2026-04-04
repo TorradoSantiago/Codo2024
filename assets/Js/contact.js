@@ -1,33 +1,33 @@
 const contactForm = document.getElementById("contact-form");
-const clearButton = document.getElementById("borrar");
+const clearButton = document.getElementById("clear-form");
 const formStatus = document.getElementById("form-status");
 const footerYear = document.getElementById("current-year");
 
 const fields = {
-    nombre: {
-        input: document.getElementById("nombre"),
-        error: document.getElementById("nombre_error"),
-        validate: (value) => value.trim().length >= 2 || "Ingresa un nombre valido."
+    name: {
+        input: document.getElementById("name"),
+        error: document.getElementById("name_error"),
+        validate: (value) => value.trim().length >= 2 || "Enter a valid name."
     },
-    correo: {
-        input: document.getElementById("correo"),
-        error: document.getElementById("correo_error"),
-        validate: (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) || "Ingresa un email valido."
+    email: {
+        input: document.getElementById("email"),
+        error: document.getElementById("email_error"),
+        validate: (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value) || "Enter a valid email address."
     },
-    empresa: {
-        input: document.getElementById("empresa"),
-        error: document.getElementById("empresa_error"),
-        validate: (value) => value.trim().length >= 3 || "Describe empresa, equipo o proyecto."
+    company: {
+        input: document.getElementById("company"),
+        error: document.getElementById("company_error"),
+        validate: (value) => value.trim().length >= 3 || "Describe the company, team, or project."
     },
-    servicio: {
-        input: document.getElementById("servicio"),
-        error: document.getElementById("servicio_error"),
-        validate: (value) => value.trim().length > 0 || "Selecciona un servicio."
+    service: {
+        input: document.getElementById("service"),
+        error: document.getElementById("service_error"),
+        validate: (value) => value.trim().length > 0 || "Select a service."
     },
-    mensaje: {
-        input: document.getElementById("mensaje"),
-        error: document.getElementById("mensaje_error"),
-        validate: (value) => value.trim().length >= 20 || "Agrega un poco mas de contexto para ayudarte mejor."
+    message: {
+        input: document.getElementById("message"),
+        error: document.getElementById("message_error"),
+        validate: (value) => value.trim().length >= 20 || "Add a bit more context so we can help properly."
     }
 };
 
@@ -88,10 +88,16 @@ if (clearButton) {
 if (contactForm) {
     const params = new URLSearchParams(window.location.search);
     const product = params.get("product");
-    const messageField = fields.mensaje.input;
+    const messageField = fields.message.input;
+    const serviceField = fields.service.input;
+    const serviceParam = params.get("service");
 
     if (product && messageField && !messageField.value) {
-        messageField.value = `Quiero recibir una propuesta para ${product}.`;
+        messageField.value = `I would like to receive a proposal for ${product}.`;
+    }
+
+    if (serviceParam && serviceField && !serviceField.value) {
+        serviceField.value = serviceParam;
     }
 
     contactForm.addEventListener("submit", (event) => {
@@ -105,7 +111,7 @@ if (contactForm) {
 
         formStatus.classList.remove("visually-hidden");
         formStatus.textContent =
-            "Consulta enviada. En una implementacion real, este formulario se conectaria con email, CRM o WhatsApp.";
+            "Inquiry submitted. In a production version, this form would connect to email, a CRM, or WhatsApp.";
         contactForm.reset();
         Object.keys(fields).forEach((fieldKey) => setFieldState(fieldKey, true));
     });

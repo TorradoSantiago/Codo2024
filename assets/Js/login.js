@@ -28,12 +28,12 @@ if (loginForm) {
 
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue)) {
             valid = false;
-            showLoginError(loginEmailError, "Ingresa un email valido.");
+            showLoginError(loginEmailError, "Enter a valid email address.");
         }
 
         if (passwordValue.length < 6) {
             valid = false;
-            showLoginError(loginPasswordError, "Usa una clave de al menos 6 caracteres para la demo.");
+            showLoginError(loginPasswordError, "Use a password with at least 6 characters for the demo.");
         }
 
         if (!valid || !loginStatus) {
@@ -42,7 +42,7 @@ if (loginForm) {
 
         loginStatus.classList.remove("visually-hidden");
         loginStatus.textContent =
-            "Ingreso demo correcto. El backend no esta conectado, pero la interfaz ya comunica una continuidad profesional.";
+            "Demo access granted. The backend is not connected yet, but the interface already communicates a more professional customer journey.";
         loginForm.reset();
     });
 }

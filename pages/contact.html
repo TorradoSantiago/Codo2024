@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HardSoft | Commercial contact</title>
+    <meta
+        name="description"
+        content="Commercial contact form for HardSoft builds, upgrades, and support services."
+    >
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/general.css">
+    <link rel="stylesheet" href="../assets/css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="../index.html" aria-label="Back to the HardSoft homepage">
+                <span class="brand-mark">HS</span>
+                <span class="brand-copy">
+                    <strong>HardSoft</strong>
+                    <small>hardware, upgrades, and support</small>
+                </span>
+            </a>
+
+            <input class="menu-toggle" type="checkbox" id="menu-toggle">
+            <label class="menu-button" for="menu-toggle">Menu</label>
+
+            <nav class="site-nav" aria-label="Main">
+                <a href="../index.html#home">Home</a>
+                <a href="../index.html#catalog">Catalog</a>
+                <a href="../index.html#services">Services</a>
+                <a href="../index.html#process">Process</a>
+                <a href="contact.html">Contact</a>
+                <a class="nav-cta" href="login.html">Client portal</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page-main page-contact">
+        <section class="page-hero">
+            <div class="container page-hero-grid">
+                <div>
+                    <span class="section-label">commercial contact</span>
+                    <h1 class="section-title">Tell us what system or upgrade you need and we will respond with a clear proposal.</h1>
+                    <p class="section-copy">
+                        This page now serves a concrete purpose: turning interest into a structured
+                        inquiry. It adds context, clearer messaging, and lightweight validation so the
+                        form no longer feels improvised.
+                    </p>
+
+                    <div class="page-hero-pills">
+                        <span class="metric-pill"><strong>24h</strong> initial response</span>
+                        <span class="metric-pill"><strong>1</strong> clear entry point</span>
+                        <span class="metric-pill"><strong>100%</strong> consultative approach</span>
+                    </div>
+                </div>
+
+                <aside class="surface-panel side-note">
+                    <h2>Best-fit inquiries</h2>
+                    <ul>
+                        <li>Workstation builds for individual roles or study setups.</li>
+                        <li>Upgrade plans for existing laptops and desktops.</li>
+                        <li>Post-sale support and operational structure for small teams.</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <section class="section-shell">
+            <div class="container page-grid">
+                <div class="surface-panel info-stack">
+                    <article>
+                        <h2>Commercial response</h2>
+                        <p>
+                            We ask only for the information needed to return a useful recommendation:
+                            primary use case, priority, and urgency.
+                        </p>
+                    </article>
+                    <article>
+                        <h2>Channels</h2>
+                        <p>Email: hola@hardsoft.com</p>
+                        <p>Suggested hours: Monday to Friday, 9 a.m. to 6 p.m.</p>
+                    </article>
+                    <article>
+                        <h2>Possible deliverables</h2>
+                        <p>
+                            A quote, a comparative proposal, an upgrade recommendation, or an implementation plan.
+                        </p>
+                    </article>
+                </div>
+
+                <form id="contact-form" class="surface-panel form-card" novalidate>
+                    <div class="form-intro">
+                        <h2>Send inquiry</h2>
+                        <p>
+                            Fill out the form and we will return a recommendation with the right level
+                            of detail to support a decision.
+                        </p>
+                    </div>
+
+                    <div class="form-grid">
+                        <label class="field">
+                            <span>Name</span>
+                            <input type="text" id="name" name="name" placeholder="Santiago">
+                            <small class="field-error" id="name_error"></small>
+                        </label>
+
+                        <label class="field">
+                            <span>Email</span>
+                            <input type="email" id="email" name="email" placeholder="user@domain.com">
+                            <small class="field-error" id="email_error"></small>
+                        </label>
+
+                        <label class="field">
+                            <span>Company or project</span>
+                            <input type="text" id="company" name="company" placeholder="Data team, studio, or business">
+                            <small class="field-error" id="company_error"></small>
+                        </label>
+
+                        <label class="field">
+                            <span>Service</span>
+                            <select id="service" name="service">
+                                <option value="">Select one</option>
+                                <option value="build">Custom build</option>
+                                <option value="upgrade">Smart upgrade</option>
+                                <option value="support">Support and maintenance</option>
+                                <option value="teams">Team procurement</option>
+                            </select>
+                            <small class="field-error" id="service_error"></small>
+                        </label>
+                    </div>
+
+                    <label class="field">
+                        <span>Message</span>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            placeholder="Share the main use case, approximate budget, and expected timeline."
+                        ></textarea>
+                        <small class="field-error" id="message_error"></small>
+                    </label>
+
+                    <div class="form-actions">
+                        <button class="button primary" type="submit">Send inquiry</button>
+                        <button class="button secondary" type="button" id="clear-form">Clear form</button>
+                    </div>
+
+                    <p id="form-status" class="status visually-hidden" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <a class="brand footer-brand" href="../index.html">
+                    <span class="brand-mark">HS</span>
+                    <span class="brand-copy">
+                        <strong>HardSoft</strong>
+                        <small>hardware, upgrades, and support</small>
+                    </span>
+                </a>
+                <p class="footer-copy">
+                    Clearer contact flow, more consistent messaging, and a sales experience that feels more prepared.
+                </p>
+            </div>
+
+            <div>
+                <h2>Explore</h2>
+                <a href="../index.html#catalog">Catalog</a>
+                <a href="../index.html#services">Services</a>
+                <a href="../index.html#process">Process</a>
+            </div>
+
+            <div>
+                <h2>Contact</h2>
+                <a href="contact.html">Commercial form</a>
+                <a href="login.html">Client portal</a>
+                <a href="mailto:hola@hardsoft.com">hola@hardsoft.com</a>
+            </div>
+        </div>
+
+        <div class="container footer-meta">
+            <p>&copy; <span id="current-year">2026</span> HardSoft. Commercial inquiry flow refreshed.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/Js/contact.js"></script>
+</body>
+</html>

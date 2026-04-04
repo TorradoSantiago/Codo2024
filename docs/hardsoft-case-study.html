@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HardSoft Website | Case Study</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 14mm 12mm 16mm;
+    }
+
+    :root {
+      --ink: #13243b;
+      --muted: #5d6b79;
+      --accent: #1460c2;
+      --accent-soft: #edf4ff;
+      --line: #d9e2ec;
+      --panel: #f8fbff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 15px;
+      color: var(--ink);
+      background: white;
+      line-height: 1.5;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    h1, h2 {
+      margin: 0 0 12px;
+      line-height: 1.15;
+      break-after: avoid-page;
+    }
+
+    h1 { font-size: 34px; }
+    h2 { font-size: 22px; }
+
+    p {
+      margin: 0 0 14px;
+      color: var(--muted);
+    }
+
+    ul {
+      margin: 0 0 16px 20px;
+      color: var(--muted);
+    }
+
+    li { margin-bottom: 8px; }
+
+    .hero {
+      padding: 28px 32px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: linear-gradient(135deg, #f9fbff 0%, #eef5ff 100%);
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+      break-inside: avoid-page;
+    }
+
+    .metric {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .label {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .section {
+      margin-top: 26px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+    }
+
+    .page-start {
+      break-before: page;
+      page-break-before: always;
+    }
+
+    .callout {
+      border-left: 4px solid var(--accent);
+      background: var(--accent-soft);
+      padding: 16px 18px;
+      border-radius: 14px;
+      color: var(--ink);
+      margin: 18px 0;
+    }
+
+    .figure {
+      margin: 22px 0;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      background: white;
+      break-inside: avoid-page;
+    }
+
+    .figure img {
+      width: 100%;
+      display: block;
+      object-fit: contain;
+      max-height: 205mm;
+    }
+
+    .figure figcaption {
+      padding: 12px 16px;
+      font-size: 13px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="eyebrow">Frontend Commerce Case</div>
+      <h1>HardSoft Website Redesign</h1>
+      <p>This repository started as a course-style static site. It now works as a more credible commercial frontend demo by adding English-first copy, clearer product logic, a structured inquiry flow, and a lightweight client portal that supports the sales narrative.</p>
+      <div class="grid">
+        <article class="card">
+          <div class="metric">4</div>
+          <div class="label">Customer-facing screens documented in the final case study</div>
+        </article>
+        <article class="card">
+          <div class="metric">8</div>
+          <div class="label">Configurations organized into a guided, filterable catalog</div>
+        </article>
+        <article class="card">
+          <div class="metric">1</div>
+          <div class="label">Consistent commercial narrative across homepage, catalog, contact, and portal</div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Purpose and working hypothesis</h2>
+      <p>The redesign tests a practical product question: can a simple static storefront feel significantly more professional once the information architecture, commercial copy, and interaction flow are tightened?</p>
+      <div class="callout">
+        Main hypothesis: clearer product segmentation and a stronger inquiry path improve perceived trust, commercial clarity, and portfolio value even without a backend.
+      </div>
+      <ul>
+        <li>The homepage should explain the offer in business terms, not just show products.</li>
+        <li>The catalog should help people browse by use case instead of reading a flat product list.</li>
+        <li>The contact and portal screens should make the project feel more complete and more sellable.</li>
+      </ul>
+    </section>
+
+    <section class="section page-start">
+      <h2>Homepage and catalog</h2>
+      <p>The homepage now frames the business around guided buying, upgrades, and operational support. The catalog adds context, not just inventory.</p>
+      <figure class="figure">
+        <img src="screenshots/home.png" alt="HardSoft homepage screenshot">
+        <figcaption>The homepage now communicates positioning, value, and service logic instead of reading like a generic student landing page.</figcaption>
+      </figure>
+      <figure class="figure">
+        <img src="screenshots/products.png" alt="HardSoft catalog screenshot">
+        <figcaption>The product page organizes eight configurations by category, commercial use case, and support path, which makes the project much easier to share as a business-facing demo.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section page-start">
+      <h2>Contact and client experience</h2>
+      <p>The contact page and portal are still frontend-only, but they now extend the product logic instead of feeling disconnected from it.</p>
+      <figure class="figure">
+        <img src="screenshots/contact.png" alt="HardSoft contact page screenshot">
+        <figcaption>The contact flow now validates inputs, pre-fills context from the catalog, and sounds like a commercial inquiry rather than a generic form.</figcaption>
+      </figure>
+      <figure class="figure">
+        <img src="screenshots/portal.png" alt="HardSoft client portal screenshot">
+        <figcaption>The demo portal adds post-sale continuity and makes the overall experience feel more like a real customer journey.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section">
+      <h2>Improved conclusion</h2>
+      <p>The strongest outcome is not technical complexity. It is perceived seriousness. By translating the full frontend into English and giving each screen a commercial role, the repository now behaves like a credible product demo rather than a class exercise.</p>
+      <div class="callout">
+        Portfolio takeaway: the project now shows frontend polish, information architecture, and product thinking in a way that non-technical reviewers can understand quickly.
+      </div>
+    </section>
+  </main>
+</body>
+</html>

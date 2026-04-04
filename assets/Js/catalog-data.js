@@ -5,49 +5,49 @@ window.hardsoftCatalog = [
         category: "workstations",
         price: 1280000,
         imageName: "prod1.png",
-        description: "Equipo para analisis, dashboards y multitarea intensiva con foco en estabilidad.",
-        audience: "Perfiles de data y BI",
-        leadTime: "Entrega sugerida: 72 hs",
-        summary: "Pensada para quienes trabajan con tableros, consultas y multitarea tecnica durante toda la jornada.",
-        tags: ["Analisis", "SQL", "BI"],
+        description: "Built for analytics, dashboards, and demanding multitasking with a focus on stability.",
+        audience: "Data and BI professionals",
+        leadTime: "Suggested delivery: 72 hours",
+        summary: "Designed for people who work with dashboards, queries, and technical multitasking throughout the day.",
+        tags: ["Analytics", "SQL", "BI"],
         includes: [
-            "Configuracion base para software tecnico y productividad.",
-            "Checklist de entrega con foco en continuidad operativa.",
-            "Ruta sugerida de upgrade para el proximo salto."
+            "Balanced setup for technical software and daily productivity.",
+            "Delivery checklist centered on operational continuity.",
+            "Suggested upgrade path for the next performance jump."
         ]
     },
     {
         slug: "pulse-creator",
         name: "Pulse Creator",
-        category: "creadores",
+        category: "creators",
         price: 1490000,
         imageName: "prod2.png",
-        description: "Pensada para diseno, edicion liviana y trabajo diario con varias aplicaciones abiertas.",
-        audience: "Freelancers y creadores",
-        leadTime: "Entrega sugerida: 72 hs",
-        summary: "Una base comoda para presentaciones, contenido visual, branding y flujo creativo de todos los dias.",
-        tags: ["Diseno", "Contenido", "Edicion"],
+        description: "Made for design, light editing, and daily work with multiple apps open at once.",
+        audience: "Freelancers and creators",
+        leadTime: "Suggested delivery: 72 hours",
+        summary: "A comfortable base for presentations, visual content, branding work, and everyday creative flow.",
+        tags: ["Design", "Content", "Editing"],
         includes: [
-            "Setup equilibrado para herramientas visuales y multitarea.",
-            "Recomendacion de perifericos segun estilo de trabajo.",
-            "Margen para crecer sin rehacer todo el equipo."
+            "Balanced setup for visual tools and multitasking.",
+            "Peripheral recommendations based on work style.",
+            "Room to scale without rebuilding the full machine."
         ]
     },
     {
         slug: "vertex-office-pro",
         name: "Vertex Office Pro",
-        category: "oficina",
+        category: "office",
         price: 890000,
         imageName: "prod3.png",
-        description: "Configuracion solida para equipos administrativos, ventas y operaciones.",
-        audience: "Operacion y ventas",
-        leadTime: "Entrega sugerida: 48 hs",
-        summary: "Resuelve puestos de trabajo que necesitan continuidad, velocidad razonable y mantenimiento simple.",
-        tags: ["Oficina", "Ventas", "CRM"],
+        description: "Reliable setup for administrative teams, sales, and operations.",
+        audience: "Operations and sales teams",
+        leadTime: "Suggested delivery: 48 hours",
+        summary: "Built for workstations that need continuity, solid speed, and simple maintenance.",
+        tags: ["Office", "Sales", "CRM"],
         includes: [
-            "Base estable para correo, CRM, navegacion y gestion.",
-            "Perfil pensado para puestos faciles de mantener.",
-            "Ideal para estandarizar estaciones de trabajo."
+            "Stable base for email, CRM, browsing, and day-to-day operations.",
+            "Profile designed for roles that must stay easy to maintain.",
+            "Ideal for standardizing office workstations."
         ]
     },
     {
@@ -56,49 +56,49 @@ window.hardsoftCatalog = [
         category: "gaming",
         price: 1710000,
         imageName: "prod4.png",
-        description: "Rendimiento visual y buena refrigeracion para largas sesiones y streaming.",
-        audience: "Gaming y streaming",
-        leadTime: "Entrega sugerida: 96 hs",
-        summary: "Una linea aspiracional para quienes priorizan experiencia, potencia visual y setup bien presentado.",
+        description: "Visual performance and cooling headroom for long sessions and streaming.",
+        audience: "Gaming and streaming users",
+        leadTime: "Suggested delivery: 96 hours",
+        summary: "An aspirational line for buyers who prioritize experience, visual power, and a polished setup.",
         tags: ["Gaming", "Streaming", "RGB"],
         includes: [
-            "Enfoque en rendimiento sostenido y temperatura controlada.",
-            "Perfil orientado a juego, captura y presencia visual.",
-            "Espacio para upgrades sin perder coherencia estetica."
+            "Focus on sustained performance and thermal control.",
+            "Profile built for gaming, capture, and visual presence.",
+            "Upgrade headroom without losing aesthetic coherence."
         ]
     },
     {
         slug: "signal-hybrid",
         name: "Signal Hybrid",
-        category: "equipos",
+        category: "teams",
         price: 1170000,
         imageName: "prod5.png",
-        description: "Una base flexible para quienes combinan oficina, visualizacion y uso profesional.",
-        audience: "Uso mixto y escalable",
-        leadTime: "Entrega sugerida: 72 hs",
-        summary: "Ideal para perfiles que cambian de contexto durante el dia y necesitan un equipo versatil.",
-        tags: ["Hibrido", "Trabajo", "Escalable"],
+        description: "A flexible base for people who combine office work, visualization, and professional use.",
+        audience: "Hybrid and scalable users",
+        leadTime: "Suggested delivery: 72 hours",
+        summary: "Ideal for people who move across contexts during the day and need a versatile machine.",
+        tags: ["Hybrid", "Work", "Scalable"],
         includes: [
-            "Balance entre productividad, visualizacion y margen tecnico.",
-            "Buena opcion para perfiles consultivos o coordinacion.",
-            "Upgrade planificado para crecer por etapas."
+            "Balance between productivity, visualization, and technical headroom.",
+            "Strong option for consulting or coordination profiles.",
+            "Planned upgrade path for staged growth."
         ]
     },
     {
         slug: "nova-compact",
         name: "Nova Compact",
-        category: "oficina",
+        category: "office",
         price: 760000,
         imageName: "prod6.png",
-        description: "Formato mas compacto para escritorios chicos sin resignar velocidad.",
-        audience: "Home office y espacios chicos",
-        leadTime: "Entrega sugerida: 48 hs",
-        summary: "Responde bien en contextos de espacio acotado, home office y puestos de trabajo silenciosos.",
-        tags: ["Compacto", "Productividad", "Silencioso"],
+        description: "A compact footprint for smaller desks without giving up speed.",
+        audience: "Home office and compact spaces",
+        leadTime: "Suggested delivery: 48 hours",
+        summary: "A strong fit for smaller spaces, remote work, and quieter workstation environments.",
+        tags: ["Compact", "Productivity", "Quiet"],
         includes: [
-            "Formato mas contenido para escritorios reducidos.",
-            "Buena experiencia en tareas administrativas y remotas.",
-            "Prioriza simpleza, orden y bajo mantenimiento."
+            "Contained form factor for tighter desk setups.",
+            "Reliable experience for administrative and remote work.",
+            "Prioritizes simplicity, order, and low maintenance."
         ]
     },
     {
@@ -107,32 +107,32 @@ window.hardsoftCatalog = [
         category: "workstations",
         price: 1390000,
         imageName: "prod7.png",
-        description: "Preparada para desarrollo, maquinas virtuales y cargas de trabajo tecnicas.",
-        audience: "Desarrollo y entornos tecnicos",
-        leadTime: "Entrega sugerida: 72 hs",
-        summary: "Una configuracion pensada para programacion, testing y entornos con varias herramientas abiertas.",
-        tags: ["Desarrollo", "Docker", "Testing"],
+        description: "Prepared for development, virtual machines, and technical workloads.",
+        audience: "Developers and technical teams",
+        leadTime: "Suggested delivery: 72 hours",
+        summary: "A configuration designed for programming, testing, and environments with several tools running at once.",
+        tags: ["Development", "Docker", "Testing"],
         includes: [
-            "Base para desarrollo, virtualizacion y multiples servicios.",
-            "Pensada para multitarea tecnica con buena estabilidad.",
-            "Recomendacion de stack y expansion segun complejidad."
+            "Foundation for development, virtualization, and multiple services.",
+            "Built for technical multitasking with stable performance.",
+            "Suggested stack and expansion path based on complexity."
         ]
     },
     {
         slug: "orbit-team-pack",
         name: "Orbit Team Pack",
-        category: "equipos",
+        category: "teams",
         price: 980000,
         imageName: "prod8.png",
-        description: "Set base para equipar varias estaciones con una logica comun y facil soporte.",
-        audience: "Estudios, oficinas y equipos",
-        leadTime: "Cotizacion por volumen",
-        summary: "La opcion mas clara cuando el objetivo es dar coherencia a varias estaciones y simplificar soporte.",
-        tags: ["Equipos", "Operacion", "Escala"],
+        description: "Base package for equipping several workstations with shared logic and easier support.",
+        audience: "Studios, offices, and small teams",
+        leadTime: "Volume-based quote",
+        summary: "The clearest option when the goal is to align several workstations and simplify support.",
+        tags: ["Teams", "Operations", "Scale"],
         includes: [
-            "Pensado para cotizaciones por volumen y criterio comun.",
-            "Facilita soporte, reemplazos y mantenimiento posterior.",
-            "Alinea rendimiento, presupuesto y escalabilidad."
+            "Built for volume quotes and consistent procurement criteria.",
+            "Simplifies support, replacements, and future maintenance.",
+            "Aligns performance, budget, and scalability."
         ]
     }
 ];

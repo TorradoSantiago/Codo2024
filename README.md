@@ -1,29 +1,32 @@
-# HardSoft
+# Codo2024
 
-Sitio institucional y catalogo demo para un negocio de hardware, upgrades y soporte. Esta version fue reorganizada para verse mas solida, tener una narrativa comercial mas clara y servir mejor como pieza de portfolio.
+Demo hardware-business website redesigned to feel more commercially structured and more useful as a portfolio piece.
 
-## Mejoras aplicadas
+Start with:
+- `BRIEF.md`
+- `docs/hardsoft-case-study.pdf`
 
-- Reescritura visual completa del home con hero, catalogo filtrable, servicios y proceso.
-- Correccion de rutas rotas, assets faltantes y enlaces inconsistentes entre paginas.
-- Nuevo formulario de contacto con validacion y mensaje de estado.
-- Portal de clientes demo con flujo simple y presentacion mas profesional.
-- Estilos compartidos listos para escalar sin rehacer toda la estructura.
+## Improvements applied
 
-## Estructura
+- Full visual rewrite of the homepage with a clearer hero, guided catalog, services, and process
+- Full English-first translation of the public frontend layer
+- Fixed broken routes, missing assets, and inconsistent page links
+- Added a stronger contact flow with validation and visible state handling
+- Added a cleaner demo client portal
+- Consolidated shared styles for easier scaling
+- Added screenshots and a non-technical case-study PDF for portfolio sharing
 
-- `index.html`: home renovado con catalogo y narrativa comercial.
-- `pages/contactos.html`: formulario comercial.
-- `pages/login.html`: portal demo de clientes.
-- `assets/css/`: estilos globales y por pagina.
-- `assets/Js/`: render del catalogo y validaciones.
+## Structure
 
-## Como abrirlo
+- `index.html`: redesigned homepage
+- `pages/contact.html`: commercial contact flow
+- `pages/login.html`: demo client portal
+- `pages/products.html`: full product and service catalog
+- `assets/css/`: shared and page-level styles
+- `assets/Js/`: English product copy, catalog rendering, and validations
+- `docs/hardsoft-case-study.html`: print-ready case study for non-technical readers
+- `docs/hardsoft-case-study.pdf`: portfolio-ready PDF version
 
-Puedes abrir `index.html` directamente en el navegador o servir la carpeta con cualquier servidor estatico liviano.
+## How to open it
 
-## Proximos pasos sugeridos
-
-- Conectar el formulario a email, CRM o WhatsApp.
-- Agregar backend real para autenticacion de clientes.
-- Incorporar stock, fichas tecnicas y comparador de configuraciones.
+Open `index.html` directly in the browser or serve the folder with any lightweight static server. For a recruiter-friendly overview, open `docs/hardsoft-case-study.pdf`.

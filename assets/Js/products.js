@@ -9,18 +9,18 @@ const totalProducts = document.getElementById("total-products");
 const totalCategories = document.getElementById("category-total");
 const averageTicket = document.getElementById("average-ticket");
 
-let activeCategory = "todos";
+let activeCategory = "all";
 
 const categoryLabels = {
-    todos: "Todos",
+    all: "All",
     workstations: "Workstations",
-    creadores: "Creadores",
-    oficina: "Oficina",
+    creators: "Creators",
+    office: "Office",
     gaming: "Gaming",
-    equipos: "Equipos"
+    teams: "Teams"
 };
 
-const currencyFormatter = new Intl.NumberFormat("es-AR", {
+const currencyFormatter = new Intl.NumberFormat("en-US", {
     style: "currency",
     currency: "ARS",
     maximumFractionDigits: 0
@@ -54,7 +54,7 @@ function renderCategories() {
         return;
     }
 
-    const categories = ["todos", ...new Set(products.map((product) => product.category))];
+    const categories = ["all", ...new Set(products.map((product) => product.category))];
 
     categoryFilters.innerHTML = categories
         .map((category) => `
@@ -70,7 +70,7 @@ function renderCategories() {
 
     categoryFilters.querySelectorAll("button").forEach((button) => {
         button.addEventListener("click", () => {
-            activeCategory = button.dataset.category || "todos";
+            activeCategory = button.dataset.category || "all";
             renderCategories();
             renderProducts();
         });
@@ -81,7 +81,7 @@ function getFilteredProducts() {
     const query = (searchInput?.value || "").trim().toLowerCase();
 
     return products.filter((product) => {
-        const matchesCategory = activeCategory === "todos" || product.category === activeCategory;
+        const matchesCategory = activeCategory === "all" || product.category === activeCategory;
         const matchesQuery = [
             product.name,
             product.category,
@@ -111,8 +111,8 @@ function renderProducts() {
     if (!filteredProducts.length) {
         productsGrid.innerHTML = `
             <article class="surface-panel empty-state">
-                <h3>No encontramos configuraciones para ese filtro.</h3>
-                <p>Prueba otra palabra o vuelve a la vista completa del catalogo.</p>
+                <h3>No configurations match that filter.</h3>
+                <p>Try another term or return to the full catalog view.</p>
             </article>
         `;
         return;
@@ -147,15 +147,15 @@ function renderProducts() {
                         <div class="product-tags">${tags}</div>
 
                         <div class="product-includes">
-                            <h4>Que resuelve mejor</h4>
+                            <h4>Best use case</h4>
                             <ul>${includes}</ul>
                         </div>
 
                         <div class="product-actions">
-                            <a class="button primary" href="contactos.html?product=${encodeURIComponent(product.name)}&service=armado">
-                                Solicitar propuesta
+                            <a class="button primary" href="contact.html?product=${encodeURIComponent(product.name)}&service=build">
+                                Request proposal
                             </a>
-                            <a class="button secondary" href="../index.html#servicios">Ver servicios</a>
+                            <a class="button secondary" href="../index.html#services">View services</a>
                         </div>
                     </div>
                 </article>
